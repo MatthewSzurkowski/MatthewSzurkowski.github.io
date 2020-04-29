@@ -1,2 +1,2 @@
 # MatthewSzurkowski.github.io
-My personal portfolio website.
+ My personal portfolio
