@@ -4,7 +4,7 @@ function logoGone(){
     }, 2000);
 
     setTimeout(function(){
-        document.getElementById("Body").style.visibility = "visible";
+        document.getElementById("hideBody").style.visibility = "visible";
     }, 2500);
 }
 
@@ -13,6 +13,5 @@ function backToTop(){
         window.scrollTo(0, 0);
     }
 }
-
 
 
