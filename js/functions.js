@@ -14,4 +14,16 @@ function backToTop(){
     }
 }
 
+/*
+
+window.onscroll = function() {
+  var y = window.scrollY;
+  if (y > 200) {
+    document.getElementById("projSection").className = 'profileChange show';
+  } else {
+    document.getElementById("projSection").className = 'profileChange hide';
+  }
+}
+
+*/
 
