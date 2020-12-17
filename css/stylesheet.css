@@ -1,7 +1,7 @@
 /*Used to temporarily fix the issue with the nav bar*/
 @media screen and (max-width: 992px) {
-    #center-welcome-area {
-        margin-top: 15%;
+    #welcome-wrapper {
+        margin-top: 15% !important;
     }
 }
 
@@ -50,6 +50,7 @@ nav a:hover {
 #welcome-box {
     background-color: #889e81;
     padding: 3%;
+    margin-top: 4%;
     width: 50%;
     height: auto;
     border-radius: 2% 40% 2% 40%;
