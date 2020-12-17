@@ -14,35 +14,52 @@
   </head>
   <body>
       <!-- My top navbar -->
-      <nav class="navbar navbar-expand-sm" style="background-color: #404040;">
-          <ul id="align-nav-bar" class="navbar-nav" style="margin-right: 2%;">
-              <li class="nav-item"> 
-                <a href="#welcomeBox" class="nav-link">Home</a> 
-              </li> 
-              <li class="nav-item"> 
-                <a class="nav-link">Resume</a> 
-              </li> 
-              <li class="nav-item"> 
-                <a class="nav-link">Contact</a> 
-              </li> 
+      <nav class="navbar fixed-top" style="background-color: #404040; opacity: 0.95;">
+        <div class="container-fluid">
+          <ul id="align-nav-bar" class="list-inline" style="margin-right: 2%;">
+            <li class="list-inline-item"> 
+              <a href="#welcomeBox" class="nav-link">Home</a> 
+            </li> 
+            <li class="list-inline-item"> 
+              <a class="nav-link">Resume</a> 
+            </li> 
+            <li class="list-inline-item"> 
+              <a class="nav-link">Contact</a> 
+            </li> 
           </ul>
+        </div>
       </nav>
-      <div id = "center-welcome-area">
-        <div id="welcome-area">
-            <div id="welcome-box">
+
+      <div class="container-fluid d-flex flex-column align-items-sm-center" id="welcome-wrapper">
+        <div class="container">
+            <div class="container" id="welcome-box">
                 <h1 style="color: snow; text-align: center;">Hi! I'm Matthew Szurkowski</h1>
                 <p style="color: snow;">Software Engineering Student @ UofG</p>
             </div>
-            <div>
-                <img id="laptop-drawing" src = "Imgs/deskDrawing.png" alt = "Drawing of a guy working">
+            <div class="container">
+                <img class="img-fluid" id="laptop-drawing" src = "Imgs/deskDrawing.png" alt = "Drawing of a guy working" style="width: 40%; height: auto;">
             </div>
         </div>
       </div>
 
       <!--About me section-->
-      <div>
-          <div id="about-me">
-
+      <div class="container-fluid" id="about-me-wrapper">
+          <div class="container" id="about-me">
+            <div class="container d-flex flex-column align-items-sm-center" id="title-and-picture-wrapper" style="text-align: center; border-right: 2px dashed black;">
+              <div class="container" id="about-me-title">
+                <h3>About Me</h3>
+              </div>
+              <div class="container-fluid" id="pic-of-me">
+                <img src="Imgs/MyProfilePic.jpeg" alt="A picture of me" id="my-pic">
+              </div>
+            </div>
+            <div class="container-fluid" id="about-me-text">
+              <p>
+                I am currently attending the <b>University of Guelph</b> for <b>Software Engineering.</b> 
+               I create projects that utilize <b>Python</b> and <b>C</b> which I post on my <b><a href="https://github.com/MatthewSzurkowski" target="_blank">GitHub</a></b>.
+               I created this website with HTML, CSS, Javascript, and Bootstrap.
+              </p>
+            </div>
           </div>
       </div>
 

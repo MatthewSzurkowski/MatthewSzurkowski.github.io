@@ -1,12 +1,25 @@
+/*Used to temporarily fix the issue with the nav bar*/
+@media screen and (max-width: 992px) {
+    #center-welcome-area {
+        margin-top: 15%;
+    }
+}
+
 html {
-    overflow-y: scroll; 
+    overflow-y: scroll;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
 }
   
 body{
-    background: #698474 !important;
-    height: auto;
-    width: auto;
+    background-color: #bac7a7 !important;
     margin: auto;
+    padding: 5%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
 }
 
 nav a{
@@ -25,21 +38,18 @@ nav a:hover {
     margin-left: auto;
 }
 
-/*Flex container for the main page area*/
-#welcome-area {
-    display: inline-flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/*A wrapper that holds my greeting and a drawing*/
+#welcome-wrapper {
+    text-align: center;
+    margin: 2%;
+    background-color: #698474;
+    border-radius: 2% 40% 2% 40%;
 }
 
-#welcome-area > * {
-    margin: 2%;
-    text-align: center;
-}
 /*Title card*/
 #welcome-box {
     background-color: #889e81;
-    padding: 5%;
+    padding: 3%;
     width: 50%;
     height: auto;
     border-radius: 2% 40% 2% 40%;
@@ -50,13 +60,29 @@ nav a:hover {
     height: auto;
 }
 
-#welcome-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    margin: auto;
+/*About me section*/
+
+#about-me-wrapper {
+    margin-top: 20%;
+    border-radius: 25% 2% 25% 2%;
+    width: 100%;
+    height: auto;
+    background-color: #e5e4cc;
 }
 
-#center-welcome-area {
+#my-pic {
+    border-radius: 50%;
+    padding:2px; 
+    border: 1px solid black;
+
+}
+
+#about-me {
+    display: flex;
+}
+
+
+#about-me-text {
+    margin: auto;
     text-align: center;
 }
