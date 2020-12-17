@@ -1,432 +1,62 @@
-@font-face {
-  src: 
-    url(fonts/OldLondon.ttf)
-    format('truetype');
-  font-family: Old London;
-}
-
-@font-face{
-  src:
-    url(fonts/LibreBaskerville-Regular.ttf)
-    format('truetype');
-  font-family: BaskerReg;
-}
-
-@font-face{
-  src:
-    url(fonts/LibreBaskerville-Bold.ttf)
-    format('truetype');
-  font-family: BaskerBold;
-}
-
-@font-face{
-  src:
-    url(fonts/Arvo-Regular.ttf)
-    format('truetype');
-  font-family: Arvo;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-
 html {
-  overflow-y: scroll; 
+    overflow-y: scroll; 
 }
-
+  
 body{
-    background-color: white;
+    background: #698474 !important;
     height: auto;
     width: auto;
     margin: auto;
 }
 
-#myPic{
-    margin-top: 3%;
-    margin-left: 3%;
-    padding:2px;
-    width: 12%;
-    height: auto;
-    border-radius: 50%;
-    border: 1px solid black;
+nav a{
+    color: #d8d8d8;
+    border-radius: 15%;
 }
 
-#profileLinks{
-  display: flex;
-}
-#resume{
-  margin-top: 1.1%;
-  margin-left: 4%; 
-  width: 2.5%;
-  height: 10%;
+nav a:hover {
+    background-color: #698474;
+    color: #d8d8d8;
+    border-radius: 15%;
 }
 
-#resume img{
-  width: 100%;
-  height: auto;
+/*Used to push navbar items to the right*/
+#align-nav-bar {
+    margin-left: auto;
 }
 
-#github{
-  margin-top: 1%;
-  margin-left: 0.5%;
-  width: 2.5%;
-  height: 10%;
+/*Flex container for the main page area*/
+#welcome-area {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-#github img{
-  width: 100%;
-  height: auto;
+#welcome-area > * {
+    margin: 2%;
+    text-align: center;
 }
-
-#linkedin {
-  width: 10%;
-  height: 10%;
-  margin-top: 0.7%;
-  margin-left: 0.5%;
-}
-
-#linkedin img{
-  width: 100%;
-  height: auto;
-}
-
-#aboutMe{
-    display: block;
-    box-shadow: 10px 10px 5px;
-    color: black;
-    padding: 2%;
-    margin: auto;
-    border: 1px solid black;
+/*Title card*/
+#welcome-box {
+    background-color: #889e81;
+    padding: 5%;
     width: 50%;
-    height: 20%;
+    height: auto;
+    border-radius: 2% 40% 2% 40%;
 }
 
-#mattSzurk1{
-  font-family: Arvo;
-  position: relative;
-  /*text-shadow: 2px 2px grey;*/;
-  color: black;
+#laptop-drawing {
+    max-width: 50%;
+    height: auto;
 }
 
-#mattSzurk2{
-  font-family: Arvo;
-  z-index: 1;
-  margin-top: -3.9%;
-  margin-left: -0.09%;
-  color: #0072b1;
-  position: absolute;
+#welcome-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: auto;
 }
 
-.pText{
-  padding-bottom: 20px;
-  /*font-size: 1vw;*/
-  font-family: BaskerReg;
-}
-
-
-
-
-
-
-#hideBody{
-    background-color: white;
-    visibility: hidden;
-}
-
-.logo{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    transform: translate(-50%, -50%);
-}
-
-/*Creds for the fade in & fade out to: Tremaine Eto
-https://medium.com/cloud-native-the-gathering/how-to-use-css-to-fade-in-and-fade-out-html-text-and-pictures-f45c11364f08
-*/
-.fade-out {
-    animation: fadeOut ease 2s;
-    -webkit-animation: fadeOut ease 2s;
-    -moz-animation: fadeOut ease 2s;
-    -o-animation: fadeOut ease 2s;
-    -ms-animation: fadeOut ease 2s;
-  }
-  @keyframes fadeOut {
-    0% {
-      opacity:1;
-    }
-    100% {
-      opacity:0;
-    }
-  }
-  
-  @-moz-keyframes fadeOut {
-    0% {
-      opacity:1;
-    }
-    100% {
-      opacity:0;
-    }
-  }
-  
-  @-webkit-keyframes fadeOut {
-    0% {
-      opacity:1;
-    }
-    100% {
-      opacity:0;
-    }
-  }
-  
-  @-o-keyframes fadeOut {
-    0% {
-      opacity:1;
-    }
-    100% {
-      opacity:0;
-    }
-  }
-  
-  @-ms-keyframes fadeOut {
-    0% {
-      opacity:1;
-    }
-    100% {
-      opacity:0;
-  }
-}
-
-
-#projSection{
-  margin-top: 15%;
-}
-
-#projects{
-  margin-top: 5%;
-  text-align: center;
-  /*margin-left: 25%;*/
-  font-family: Arvo;
-  /*text-shadow: 2px 2px grey;*/
-  color: black;
-}
-
-#projectsLine{
-  margin-left: 25%;
-  border-width: 2px; 
-  width: 50%;
-}
-
-
-#projectsContainer{
-  display: flex;
-  margin: auto;
-  width: 70%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-#project{
-  box-shadow: 0.5vw 0.5vw 0.5vw 0.5vw;
-  display: flex;
-  /*Changes how many boxes in one row (60% means one a row)*/
-  flex: 1 0 30%;
-  margin: 2%;
-  border: 1px solid black;
-  border-radius: 1%;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-}
-
-
-.projText{
-  height: 30%;
-  width: 70%;
-  margin: auto;
-  font-family: BaskerReg;
-  padding-top: 5%;
-  text-align: center;
-}
-
-#project a{
-  margin: auto;
-  margin-top: 5%;
-  padding-bottom: 2%;
-  text-align:center;
-  width: 20%;
-}
-
-.githubProj{
-  width: 50%;
-}
-
-.Headers{
-  font-family: Arvo;
-  height: 20%;
-  text-align: center; 
-}
-
-.fillSpace{
-  text-align: center;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.BOP{
-  margin-top: 5%;
-  /*margin-left: 5%;*/
-  text-align: center;
-}
-
-
-/* Sweep To Right */
-.hvr-sweep-to-right {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-.hvr-sweep-to-right:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #adaaaa;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
-  color: white;
-}
-.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-
-
-@media only screen and (min-width: 951px){
-  #aboutMe{
-    margin-left: 25%;
-    margin-top: -15%;
-  }
-  .Headers{
-    font-size: 1.5vw; 
-  }
-  #mattSzurk1{
-    font-size: 2vw;
-  }
-  #mattSzurk2{
-    font-size: 2vw;
-  }
-  #projects{
-    font-size: 2.5vw;
-  }
-}
-
-@media only screen and (max-width: 950px) {
-  #myPic{
-    margin-left: 50%;
-    width: 30%;
-    transform: translate(-51%, 0%);
-  }
-  .Headers{
-    font-size: 5vw; 
-  }
-  #resume{
-    width: 6.5%;
-    margin-left: 50.5%;
-    transform: translate(-51%, 0%);
-  }
-  #github{
-    width: 6.5%;
-    margin-top: 8%;
-    margin-left: -6.5%;
-    transform: translate(-51%, 0%);
-  }
-  #linkedin{
-    width: 20%;
-    margin-top: 13%;
-    padding-top: 1%;
-    transform: translate(-80%, 0%);
-  }
-  /*
-  .fillSpace{
-    height: 40%;
-  }*/
-
-  #aboutMe{
-    width: 80%;
-  }
-  
-  #mattSzurk1{
+#center-welcome-area {
     text-align: center;
-    font-size: 5vw;
-  }
-  #mattSzurk2{
-    margin-top: -9.8%;
-    margin-left: 14.1%;
-    font-size: 5vw;
-    opacity: 0;
-  }
-  #projects{
-    font-size: 5.5vw;
-  }
-  .pText{
-    text-align: center;
-  }
-  #project{
-    flex: 1 1 60%;
-  }
-  .projText{
-    font-size: 2.5vw;
-  }
-}
-
-
-footer{
-  margin-top: 5%;
-  text-align: center;
-}
-
-.hide {
-  opacity: 0;
-  left: -100%;
-}
-.show {
-  opacity: 1;
-  left: 0;
-}
-
-.profileChange{
-  z-index: 1;
-  transition: all 1s;
 }

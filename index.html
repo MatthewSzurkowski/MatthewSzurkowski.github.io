@@ -1,107 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matthew Szurkowski | Software Engineer</title>
-    <script src="js/functions.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-</head>
-<script>backToTop()</script>
-<body>
-    <div class = "fade-out">
-        <script>logoGone()</script>
-        <img src="imgs/websiteLogo.jpg" class="logo" id = "logo">
-    </div>
-    <div id = "hideBody">
-        <img src = "imgs/MyProfilePic.jpeg" alt = "Picture of me" id = "myPic" width="200px" height="200px">
-        <!--Profile links and images-->
-        <div id="profileLinks">
-            <a href="resume.pdf" target="_blank" id = "resume">
-                <img src="imgs/resume.png" />
-            </a>
-            <a href="https://github.com/MatthewSzurkowski" target="_blank" id="github">
-                <img src="imgs/GitHub-Mark-64px.png" alt="Github logo">
-            </a>
-            <a href="https://www.linkedin.com/in/matthew-szurkowski-56a9661a2/" target="_blank" id = "linkedin">
-                <img src="imgs/linkedin logo.png" alt="My linkedin">
-            </a>
-        </div>
-        <!--About me section-->
-        <div id = "aboutMe">
-            <h1 id = "mattSzurk1"><u>Matthew Szurkowski</u></h1>
-            <h1 id = "mattSzurk2">Matthew Szurkowski</h1>
-            <p class = "pText"> I am currently attending the <span style="font-family: BaskerBold;">University of Guelph</span> for <span style="font-family: BaskerBold;">Software Engineering.</span> 
-               I create projects that utilize <span style="font-family: BaskerBold;">Python</span> and <span style="font-family: BaskerBold;">C</span> which I post on my <span style="font-family: BaskerBold;"><a href="https://github.com/MatthewSzurkowski" target="_blank">GitHub</a></span>. 
-               One of my most notable projects is my SoundCloud playlist downloader,
-               which is a Python program that uses Selenium and Chrome Webdriver to collect playlist info and automatically
-               start downloading songs from the specified playlist. 
-            </p>
-        </div>
-
-        <!--Projects below--->
-        <div id = "projSection" class="profileChange show">
-            <h1 id = "projects">Projects</h1>
-            <hr id = "projectsLine">
-            <div id = "projectsContainer">
-
-                <!--SoundCloud Playlist Downloader-->
-
-                <div class = "hvr-sweep-to-right" id="project">
-                    <h1 class = "Headers"><u>SoundCloud Playlist Downloader</u></h1>
-                    <video width="100%" height="40%" autoplay muted controls loop>
-                        <source src="videos/SCDemo.mp4" type="video/mp4">
-                    </video>
-                    <p class="projText">This is a Python program that uses Selenium and Chrome webdriver to take URL's of the 
-                        users songs in their SoundCloud playlist and downloads them song by song.
-                    </p>
-                    <a href="https://github.com/MatthewSzurkowski/SoundCloud-Playlist-Downloader" target="_blank">
-                        <img src="imgs/GitHub-Mark-64px.png" alt="Github logo" class="githubProj">
-                    </a>
-                </div>
-
-                <!--MAC Spoofing Script-->
-
-                <div class = "hvr-sweep-to-right" id="project"> 
-                    <h1 class = "Headers"><u>MAC Spoofing Script</u></h1>
-                    <video width="100%" height="40%" autoplay muted controls loop>
-                        <source src="videos/macSpoof.mp4" type="video/mp4">
-                    </video>
-                    <p class="projText">A short shell script that spoofs your MAC address to stay anonymous.</p>
-                    <a href="https://github.com/MatthewSzurkowski/MAC-Spoofing-Script" target="_blank">
-                        <img src="imgs/GitHub-Mark-64px.png" alt="Github logo" class="githubProj">
-                    </a>
-                </div>
-
-                <!--ImageFiltering-->
-
-                <div class = "hvr-sweep-to-right" id="project"> 
-                    <h1 class = "Headers"><u>ImageFiltering</u></h1>
-                    <img width="70%" height="40%" src="imgs/imageFiltering.png" alt="imageFiltering">
-                    <p class="projText">A python GUI program that allows users to add filters to images they upload. These images can then be downloaded with the filter placed on the image.</p>
-                    <a href="https://github.com/MatthewSzurkowski/ImageFiltering" target="_blank">
-                        <img src="imgs/GitHub-Mark-64px.png" alt="Github logo" class="githubProj">
-                    </a>
-                </div>
-
-                <!--webPiano-->
-
-                <div class = "hvr-sweep-to-right" id="project"> 
-                    <h1 class = "Headers"><u>webPiano</u></h1>
-                    <img width="70%" height="40%" src="imgs/pianoDemo.png" alt="webPiano">
-                    <p class="projText">A piano made with HTML, CSS, and JS.</p>
-                    <a href="https://github.com/MatthewSzurkowski/webPiano" target="_blank">
-                        <img src="imgs/GitHub-Mark-64px.png" alt="Github logo" class="githubProj">
-                    </a>
-                </div>
-
-
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Matthew Szurkowski | Software Engineer</title>
+  </head>
+  <body>
+      <!-- My top navbar -->
+      <nav class="navbar navbar-expand-sm" style="background-color: #404040;">
+          <ul id="align-nav-bar" class="navbar-nav" style="margin-right: 2%;">
+              <li class="nav-item"> 
+                <a href="#welcomeBox" class="nav-link">Home</a> 
+              </li> 
+              <li class="nav-item"> 
+                <a class="nav-link">Resume</a> 
+              </li> 
+              <li class="nav-item"> 
+                <a class="nav-link">Contact</a> 
+              </li> 
+          </ul>
+      </nav>
+      <div id = "center-welcome-area">
+        <div id="welcome-area">
+            <div id="welcome-box">
+                <h1 style="color: snow; text-align: center;">Hi! I'm Matthew Szurkowski</h1>
+                <p style="color: snow;">Software Engineering Student @ UofG</p>
+            </div>
+            <div>
+                <img id="laptop-drawing" src = "Imgs/deskDrawing.png" alt = "Drawing of a guy working">
             </div>
         </div>
-      <footer>
-        <p class="pText">© Matthew Szurkowski 2020</p>
-      </footer>
-    </div>
-</body>
+      </div>
+
+      <!--About me section-->
+      <div>
+          <div id="about-me">
+
+          </div>
+      </div>
+
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
 </html>
