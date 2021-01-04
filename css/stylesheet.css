@@ -62,9 +62,8 @@ nav a:hover {
 /*About me section*/
 
 #about-me-wrapper {
-    visibility: hidden;
     margin-top: 10%;
-    margin-bottom: 10%;
+    
     border-radius: 25% 2% 25% 2%;
     width: 100%;
     height: auto;

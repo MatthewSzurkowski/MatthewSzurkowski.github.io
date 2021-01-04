@@ -1,3 +1,5 @@
+
+/*
 // Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
 let last_known_scroll_position = 0;
 let ticking = false;
@@ -28,3 +30,4 @@ document.addEventListener('scroll', function(e) {
     ticking = true;
   }
 });
+*/
