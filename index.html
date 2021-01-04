@@ -5,14 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="https://MatthewSzurkowski.github.io/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://MatthewSzurkowski.github.io/bootstrap.min.css" type="text/css" />
     <script src="https://MatthewSzurkowski.github.io/bootstrap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--For favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!--Animations-->
+    <link rel="stylesheet" href="css/animate.css/animate.css">
+    <script src="js/functions.js"></script>
     <title>Matthew Szurkowski | Software Engineer</title>
   </head>
-  <body>
+  <body onLoad="window.scroll(0, 0)">
       <!-- My top navbar -->
       <nav class="navbar fixed-top" style="background-color: #404040; opacity: 0.95;">
         <div class="container-fluid">
@@ -32,7 +42,7 @@
 
       <div class="container d-flex flex-column align-items-sm-center" id="welcome-wrapper">
             <div class="container" id="welcome-box">
-                <h1 style="color: snow; text-align: center;">Hi! I'm Matthew Szurkowski</h1>
+                <h1 class="animate__animated animate__fadeInDown" style="color: snow; text-align: center;">Hi! I'm Matthew Szurkowski</h1>
                 <p style="color: snow;">Software Engineering Student @ UofG</p>
             </div>
             <div class="container">
@@ -40,19 +50,30 @@
             </div>
       </div>
 
+      <div class="container">
+        <div class="d-flex justify-content-between" style="height: 200px; margin-top: 15%;">
+          <div class="container align-self-center">
+            <img class="img-fluid" src="Imgs/cloud-1.png" alt="A picture of a cloud">
+          </div>
+          <div class="align-self-end">
+            <img class="img-fluid" src="Imgs/cloud-2.png" alt="A picture of a cloud">
+          </div>
+        </div>
+      </div>
+
       <!--About me section-->
-      <div class="container-fluid" id="about-me-wrapper">
+      <div class="container animate__animated " id="about-me-wrapper">
           <div class="container" id="about-me">
             <div class="container d-flex flex-column align-items-sm-center" id="title-and-picture-wrapper" style="text-align: center; border-right: 2px dashed black;">
               <div class="container" id="about-me-title">
                 <h3>About Me</h3>
               </div>
               <div class="container-fluid" id="pic-of-me">
-                <img src="Imgs/MyProfilePic.jpeg" alt="A picture of me" id="my-pic">
+                <img class="img-fluid" src="Imgs/MyProfilePic.jpeg" alt="A picture of me" id="my-pic">
               </div>
             </div>
             <div class="container-fluid" id="about-me-text">
-              <p>
+              <p class="lead">
                 I am currently attending the <b>University of Guelph</b> for <b>Software Engineering.</b> 
                I create projects that utilize <b>Python</b> and <b>C</b> which I post on my <b><a href="https://github.com/MatthewSzurkowski" target="_blank">GitHub</a></b>.
                I created this website with HTML, CSS, Javascript, and Bootstrap.
@@ -61,7 +82,13 @@
           </div>
       </div>
 
-      
+
+      <!--Projects
+      <div class="container-fluid">
+        <div class="container d-flex flex-column align-items-sm-center">
+          
+        </div>
+      </div>-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </body>
 </html>
