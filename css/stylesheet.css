@@ -38,6 +38,7 @@ nav a:hover {
 /*A wrapper that holds my greeting and a drawing*/
 #welcome-wrapper {
     text-align: center;
+    /*margin: 0 auto !important;*/
     margin: 2%;
     background-color: #698474;
     border-radius: 2% 40% 2% 40%;
