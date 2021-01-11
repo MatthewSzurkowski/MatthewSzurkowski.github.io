@@ -9,6 +9,9 @@
     #welcome-wrapper {
         margin-top: 35% !important;
     }
+    #logo-links {
+        width: 10% !important;
+    }
 }
 
 @media screen and (min-width: 1000px) {
