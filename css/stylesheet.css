@@ -12,6 +12,12 @@
     #logo-links {
         width: 5% !important;
     }
+    #align-nav-bar {
+        text-align: center !important;
+    }
+    .project-card {
+        transition: none !important;
+    }
 }
 
 @media screen and (min-width: 1000px) {
