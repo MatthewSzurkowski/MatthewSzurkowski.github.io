@@ -10,13 +10,10 @@
         margin-top: 35% !important;
     }
     #logo-links {
-        width: 5% !important;
+        width: 6% !important;
     }
     #align-nav-bar {
         text-align: center !important;
-    }
-    .project-card {
-        transition: none !important;
     }
 }
 
