@@ -9,6 +9,9 @@
     #welcome-wrapper {
         margin-top: 35% !important;
     }
+    #logo-links {
+        width: 10% !important;
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -104,9 +107,25 @@ body{
     margin: 5% 5% 0% 5% !important;
     border-radius: 1%;
     background-color: #889e81;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    /*box-shadow: 0 0 1px rgba(0, 0, 0, 0);*/
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
 }
 
 
 .project-text {
     margin-top: 10%;
+}
+
+/* Grow */
+
+.project-card:hover,
+.project-card:focus,
+.project-card:active {
+    transform: scale(1.1);
 }
