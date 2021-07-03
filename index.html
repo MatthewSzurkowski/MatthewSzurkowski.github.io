@@ -1,160 +1,425 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<html class="no-js" lang="en">
+
+<head>
     <meta charset="utf-8">
+    
+    <!--====== Title ======-->
+    <title>Szurkowski</title>
+    
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link href="https://MatthewSzurkowski.github.io/bootstrap.min.css" type="text/css" />
-    <script src="https://MatthewSzurkowski.github.io/bootstrap.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!--For favicon-->
+
+    <!--====== Favicon Icon ======-->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-    <!--Animations-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/functions.js"></script>
-    <title>Matthew Szurkowski | Software Engineer</title>
-  </head>
-  <body onLoad="window.scroll(0, 0)">
-      <!-- My top navbar -->
-      <nav class="navbar fixed-top" style="background-color: #404040; opacity: 0.95;">
-        <div class="container-fluid">
-          <a id="logo-links" href="https://github.com/MatthewSzurkowski" style="width:5%;">
-            <img class="img-fluid" src="Imgs/GitHub-Mark-120px-plus.png" alt="Github logo">
-          </a>
-          <a id="logo-links" href="https://www.linkedin.com/in/matthew-szurkowski/" style="width: 5%; margin-left: 2%;">
-            <img class="img-fluid" src="Imgs/LI-In-Bug.png" alt="Linkedin logo">
-          </a>
-          <ul id="align-nav-bar" class="list-inline" style="margin-right: 2%;">
-            <li class="list-inline-item"> 
-              <a href="#top" class="nav-link">Home</a> 
-            </li> 
-            <li class="list-inline-item"> 
-              <a href="resume.pdf" class="nav-link">Resume</a> 
-            </li> 
-            <li class="list-inline-item"> 
-              <a href="mailto:mszurkow@gmail.com" class="nav-link">Contact</a> 
-            </li> 
-          </ul>
-        </div>
-      </nav>
-
-      <div class="d-flex flex-column" id="welcome-wrapper">
-            <div class="col align-self-center" id="welcome-box">
-                <h1 class="animate__animated animate__fadeInDown" style="color: snow; text-align: center;">Hi! I'm Matthew Szurkowski</h1>
-                <p style="color: snow;">Software Engineering Student @ UofG</p>
-            </div>
-            <div class="col align-self-center">
-                <img class="img-fluid animate__animated animate__slideInUp" id="laptop-drawing" src = "Imgs/deskDrawing.png" alt = "Drawing of a guy working" style="width: 40%; height: auto;">
-            </div>
-      </div>
-
-      <div class="container">
-        <div class="d-flex justify-content-between" style="height: 200px; margin-top: 15%;">
-          <div class="container align-self-center">
-            <img class="img-fluid" src="Imgs/cloud-1.png" alt="A picture of a cloud">
-          </div>
-          <div class="align-self-end">
-            <img class="img-fluid" src="Imgs/cloud-2.png" alt="A picture of a cloud">
-          </div>
-        </div>
-      </div>
-
-      <!--About me section-->
-      <div class="container" data-aos="fade-up" id="about-me-wrapper">
-          <div class="container" id="about-me">
-            <div class="container d-flex flex-column align-items-sm-center" id="title-and-picture-wrapper" style="text-align: center; border-right: 2px dashed black;">
-              <div class="container" id="about-me-title">
-                <h3>About Me</h3>
-              </div>
-              <div class="container-fluid" id="pic-of-me">
-                <img class="img-fluid" src="Imgs/MyProfilePic.jpeg" alt="A picture of me" id="my-pic">
-              </div>
-            </div>
-            <div class="container-fluid" id="about-me-text">
-              <p class="lead">
-                I am currently attending the <b>University of Guelph</b> for <b>Software Engineering.</b> 
-               I create projects that utilize <b>Python</b> and <b>C</b> which I post on my <b><a href="https://github.com/MatthewSzurkowski" target="_blank">GitHub</a></b>.
-               I created this website with HTML, CSS, Javascript, and Bootstrap.
-              </p>
-            </div>
-          </div>
-      </div>
-
-
-      <!--Projects-->
-      <div class="containter" data-aos="fade-right" style="text-align: center; margin-top: 15%;">
-        <h1>Projects</h1>
-      </div>
-      <hr style="margin: 5% 0% 0% 25%; width: 50%;"/>
-
-      <div class="container text-center" data-aos="fade-up" style="margin-top: 10%;">
-        <div class="row justify-content-center">
-          
-          <div class="col-sm project-card">
-            <h2 class="project-text"><u>Fibonacci Retracements</u></h2>
-            <div class="embed-responsive embed-responsive-16by9" style="margin-top: 10%;">
-              <video src="videos/FibDemo.mov" autoplay muted controls loop width="75%"></video>
-            </div>
-            <div class="container">
-              <p class="project-text">A program that graphs fibonacci retracements using 
-                CSV data from the stock market downloaded via yahoo finance.</p>
-            </div>
-          </div>
-
-          <div class="col-sm project-card">
-            <h2 class="project-text"><u>Filter Creator</u></h2>
-            <div class="container" style="margin-top: 10%;">
-              <img class="img-fluid" width="75%" src="Imgs/imageFiltering.png" alt="Screen capture of imageFiltering program">
-            </div>
-            <div class="container">
-              <p class="project-text">A python GUI program 
-                that allows users to add filters to images they upload. These images 
-                can then be downloaded with the filter placed on the image.</p>
-            </div>
-          </div>
-        </div>
         
-        <div class="row justify-content-center">
-          
-          <div class="col-sm project-card">
-            <h2 class="project-text"><u>MAC Spoofing Script</u></h2>
-            <div class="embed-responsive embed-responsive-16by9" style="margin-top: 10%;">
-              <video src="videos/macSpoof.mp4" autoplay muted controls loop width="75%"></video>
-            </div>
-            <div class="container">
-              <p class="project-text">A short shell script that spoofs your MAC address to stay anonymous. 
-                This program was created to maneuver around Circle by Disney.
-              </p>
-            </div>
-          </div>
-          
-          <div class="col-sm project-card">
-            <h2 class="project-text"><u>geniusClone</u></h2>
-            <div class="container" style="margin-top: 10%;">
-              <img class="img-fluid" width="75%" src="https://camo.githubusercontent.com/2be24cfa7dec15c91ebac0178a5ac0991e35c4f297f56aff3c89e1e4d341fb93/68747470733a2f2f692e696d6775722e636f6d2f7245585a6b75452e706e67" alt="webPiano demo picture">
-            </div>
-            <div class="container">
-              <p class="project-text">Search for your favourite artist's top songs and lyrics with geniusClone!
-                Using API calls from Last.fm and lyrics.ovh, geniusClone displays any artists top 50 songs with their lyrics (if available).</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+        
+    <!--====== Glide CSS ======-->
+    <link rel="stylesheet" href="assets/css/glide.core.css">
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap-5.0.5-alpha.min.css">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
 
-    <script>AOS.init();</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <footer style="margin-top: 10%; text-align: center;">
-      <p>© Matthew Szurkowski 2020</p>
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+
+    <section id="home" class="header_area">
+        <div id="header_navbar" class="header_navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img id="logo" src="assets/images/logo.png" alt="Logo" width="100em" height="100%">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="page-scroll active" href="#home">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#about">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#skills">Skills</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#resume">Resume</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header navbar -->
+
+        <div class="header_hero">
+            <div class="single_hero bg_cover d-flex align-items-center" style="background-image: url(assets/images/bg.jpg)">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-10">
+                            <div class="hero_content text-center">
+                                <h2 class="hero_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Matthew Szurkowski</h2>
+                                <h4 id="sub-title" class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Software Engineering Student @ UofG</h4>
+                                <div id="media_links" class="footer_social pt-15">
+                                    <ul>
+                                        <li><a target=”_blank” href="https://github.com/MatthewSzurkowski"><i class="lni lni-github-original"></i></a></li>
+                                        <li><a target=”_blank” href="https://www.instagram.com/szurkowskalino/?hl=en"><i class="lni lni-instagram-original"></i></a></li>
+                                        <li><a target=”_blank” href="https://www.linkedin.com/in/matthew-szurkowski/"><i class="lni lni-linkedin-original"></i></a></li>
+                                    </ul>
+                                </div>
+                                <a href="#features" class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">About Me</a>
+                            </div> <!-- hero content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- single hero -->
+        </div> <!-- header hero -->
+    </section>
+
+    <!--====== HEADER PART ENDS ======-->
+    
+    <!--====== FEATURES PART START ======-->
+
+    <section id="about" class="features_area pt-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-25">
+                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">About Me</h4>
+                        <!-- <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
+                            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p> -->
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7">
+                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
+                        data-wow-delay="0.4s">
+                        <div class="portfolio-item center-block">
+                            <a href="#"><img class="img-portfolio img-responsive" src="assets/images/MyProfilePic.jpeg"></a>
+                        </div>
+                    </div> <!-- single features -->
+                </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
+                        data-wow-delay="0.6s">
+                        <i class="lni lni-star"></i>
+                        <h4 class="features_title">Hi! I'm Matt.</a></h4>
+                        <p>I am a dedicated, diligent, and enthusiastic 
+                            individual that has gained a wide set of skills and expertise. 
+                            From programming languages abilites to leadership, I am a well rounded individual which 
+                            gives me a competitive edge in my future ventures.</p>
+                    </div> <!-- single features -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== FEATURES PART ENDS ======-->
+    
+    <!--====== ABOUT PART START ======-->
+
+    <!--====== ABOUT PART ENDS ======-->
+    
+    <!--====== FEATURES PART START ======-->
+
+    <section id="skills" class="features_area pt-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-25">
+                        <h4 id="my_skills" class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">My Skills</h4>
+                        <figure class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                            <blockquote class="blockquote">
+                              <p>"when love and skill work together, expect a masterpiece."</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                              <cite title="Source Title">John Ruskin</cite>
+                            </figcaption>
+                          </figure>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <i class="lni lni-code-alt"></i>
+                        <h4 class="features_title">Programming</h4>
+                        <p>Experienced in C, Python C, Javascript, and HTML/CSS. Comfortable in Java and Bash. Familiar with C++, Lua, Perl, React, and MySQL.</p>
+                    </div> <!-- single features -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
+                        data-wow-delay="0.3s">
+                        <i class="lni lni-clipboard"></i>
+                        <h4 class="features_title">Leadership</h4>
+                        <p>Leadership has always been an essential ability of mine, whether it was at Oakville Soccer Camp, teaching coding classes at MindKraft, or working as a residence assistant at UofG.</p>
+                    </div> <!-- single features -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
+                        data-wow-delay="0.4s">
+                        <i class="lni lni-keyboard"></i>
+                        <h4 class="features_title">Frameworks</h4>
+                        <p>Assembled many projects using Bootstrap 5. Experimented with Flask, Express.js, Node.js, and jQuery.</p>
+                    </div> <!-- single features -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
+                        data-wow-delay="0.2s">
+                        <i class="lni lni-magnifier"></i>
+                        <h4 class="features_title">Data Analysis</h4>
+                        <p>Developed several projects which utilized big data in CTS*2000. Created a data analysis project that utilized numerous datasets to determine which country had the greatest progression through COVID-19.</p>
+                    </div> <!-- single features -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
+                        data-wow-delay="0.3s">
+                        <i class="lni lni-users"></i>
+                        <h4 class="features_title">Team Player</h4>
+                        <p>Accelerated in team environments in and out of school. Demonstrated Agile and Waterfall software developement abilites in several software design courses.</p>
+                    </div> <!-- single features -->
+                </div>
+            </div>
+        </div> <!-- container -->
+    </section>
+
+    <!--====== FEATURES PART ENDS ======-->
+    
+    <!--====== PORTFOLIO PART START ======-->
+
+    <section id="portfolio" class="portfolio_area pt-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-60">
+                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">My Portfolio</h4>
+                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Projects I have created over the years.</p>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="portfolio_wrapper d-flex flex-wrap justify-content-center ">
+            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                <img src="assets/images/portfolio-1.jpg" alt="portfolio">
+                <div class="portfolio_content">
+                    <ul class="meta">
+                        <li><a href="#"><i class="lni lni-github-original"></i></a></li>
+                    </ul>
+                    <h5 class="portfolio_title">Algo Trading</h5>
+                </div> <!-- Single portfolio -->
+            </div> <!-- portfolio wrapper -->
+            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                <img src="assets/images/portfolio-2.jpg" alt="portfolio">
+                <div class="portfolio_content">
+                    <ul class="meta">
+                        <li><a href="#"><i class="lni lni-github-original"></i></a></li>
+                    </ul>
+                    <h5 class="portfolio_title">GeniusClone</h5>
+                </div> <!-- Single portfolio -->
+            </div> <!-- portfolio wrapper -->
+            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                <img src="assets/images/portfolio-3.jpg" alt="portfolio">
+                <div class="portfolio_content">
+                    <ul class="meta">
+                        <li><a href="#"><i class="lni lni-github-original"></i></a></li>
+                    </ul>
+                    <h5 class="portfolio_title">macConfig</h5>
+                </div> <!-- Single portfolio -->
+            </div> <!-- portfolio wrapper -->
+        </div> <!-- row -->
+    </section>
+
+    <!--====== PORTFOLIO PART ENDS ======-->
+    
+    <!--====== PRICING PART START ======-->
+
+    <section id="resume" class="pricing_area pt-120 pb-130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center pb-25">
+                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Resume</h4>
+                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Feel free to download my resume!</p>
+                        <div id="download-cv" class="container">
+                            <button type="button" class="btn btn-outline-success">
+                                <a href="Szurkowski_Matthew.pdf" title="Download CV" class="button button-primary" download="">Download CV</a>
+                            </button>
+                        </div>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== PRICING PART ENDS ======-->
+    
+    
+    
+    
+    
+    <!--====== CONTACT PART START ======-->
+
+    <section id="contact" class="contact_area bg_cover pt-120 pb-130" style="background-image: url(assets/images/contact_bg.jpg)">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title section_title_2 text-center pb-25">
+                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Contact Me</h4>
+                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Shoot me a quick message and I'll get back to you!</p>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            
+            <form id="contact-form" action="https://formspree.io/f/mjvjopab" method="post" class="wow fadeInUp"
+                data-wow-duration="1.3s" data-wow-delay="0.4s">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="single_form">
+                            <input type="text" placeholder="Name" name="name" id="name" required>
+                        </div> <!-- single form -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single_form">
+                            <input type="email" placeholder="Email" name="email" id="email" required>
+                        </div> <!-- single form -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single_form">
+                            <input type="text" placeholder="Phone Number" name="number" id="number" required>
+                        </div> <!-- single form -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single_form">
+                            <input type="text" placeholder="Subject" name="subject" id="subject" required>
+                        </div> <!-- single form -->
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="single_form">
+                            <textarea placeholder="Message" name="message" id="message" required></textarea>
+                        </div> <!-- single form -->
+                    </div>
+                    
+                    <p class="form-message"></p>
+                    
+                    <div class="col-lg-12">
+                        <div class="single_form text-center">
+                            <button class="main-btn" type="submit">SUBMIT</button>
+                        </div> <!-- single form -->
+                    </div>
+                </div> <!-- row -->
+            </form>
+        </div> <!-- container -->
+    </section>
+
+    <!--====== CONTACT PART ENDS ======-->
+    
+    <!--====== FOOTER PART START ======-->
+
+    <footer id="footer" class="footer_area">
+        <div class="container">
+            <div class="footer_wrapper text-center d-lg-flex align-items-center justify-content-between">
+                <p class="credit">© 2021 Matthew Szurkowski.</p>
+                <div class="footer_social pt-15">
+                    <ul>
+                        <li><a href="target=”_blank” https://github.com/MatthewSzurkowski"><i class="lni lni-github-original"></i></a></li>
+                        <li><a href="target=”_blank” https://www.instagram.com/szurkowskalino/?hl=en"><i class="lni lni-instagram-original"></i></a></li>
+                        <li><a href="target=”_blank” https://www.linkedin.com/in/matthew-szurkowski/"><i class="lni lni-linkedin-original"></i></a></li>
+                    </ul>
+                </div> <!-- footer social -->
+            </div> <!-- footer wrapper -->
+        </div> <!-- container -->
     </footer>
-  </body>
+
+    <!--====== FOOTER PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->
+
+    
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
+    
+    <!--====== glide js ======-->
+    <script src="assets/js/glide.min.js"></script>
+    
+    <!--====== wow js ======-->
+    <script src="assets/js/wow.min.js"></script>
+    
+    <!--====== Contact Form js ======-->
+    <script src="assets/js/contact-form.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    
+</body>
+
 </html>
