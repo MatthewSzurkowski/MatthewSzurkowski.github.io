@@ -1,425 +1,742 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="eng">
+
+
 
 <head>
-    <meta charset="utf-8">
-    
-    <!--====== Title ======-->
-    <title>Szurkowski</title>
-    
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Matthew Szurkowski</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        
-    <!--====== Animate CSS ======-->
-    <link rel="stylesheet" href="assets/css/animate.css">
-        
-    <!--====== Glide CSS ======-->
-    <link rel="stylesheet" href="assets/css/glide.core.css">
-        
-    <!--====== Line Icons CSS ======-->
-    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
-        
-    <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap-5.0.5-alpha.min.css">
-    
-    <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
-    
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgfavicon.ico">
+
+    <meta name="generator" content="Hugo 0.83.1">
+    <meta name="author" content="Matthew Szurkowski">
+    <meta name="description"
+        content="The portfolio of Matthew Szurkowski, a software developer. He is currently a Systems Developer at The Co-operators. He is a passionate programmer and a great team player.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mattszurkowski.com">
+    <meta property="og:title" content="Matthew Szurkowski">
+    <meta property="og:description"
+        content="The portfolio of Matthew Szurkowski, a software developer. He is currently a Systems Developer at The Co-operators. He is a passionate programmer and a great team player.">
+    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mattszurkowski.com">
+    <meta property="twitter:title" content="Matthew Szurkowski">
+    <meta property="twitter:description"
+        content="The portfolio of Matthew Szurkowski, a software developer. He is currently a Systems Developer at The Co-operators. He is a passionate programmer and a great team player.">
+    <meta property="twitter:image" content="assets/img/logo.png">
+    <meta http-equiv="cache-control" content="no-cache">
+    <style>
+        @keyframes accordion-0-retracting {
+            from {
+                max-height: 36px;
+                padding-bottom: 15px;
+            }
+
+            to {
+                max-height: 0px;
+                padding-bottom: 0px;
+            }
+        }
+
+        @keyframes accordion-1-retracting {
+            from {
+                max-height: 36px;
+                padding-bottom: 15px;
+            }
+
+            to {
+                max-height: 0px;
+                padding-bottom: 0px;
+            }
+        }
+
+        @keyframes accordion-2-retracting {
+            from {
+                max-height: 36px;
+                padding-bottom: 15px;
+            }
+
+            to {
+                max-height: 0px;
+                padding-bottom: 0px;
+            }
+        }
+
+        @keyframes accordion-3-retracting {
+            from {
+                max-height: 54px;
+                padding-bottom: 15px;
+            }
+
+            to {
+                max-height: 0px;
+                padding-bottom: 0px;
+            }
+        }
+
+        @keyframes accordion-4-retracting {
+            from {
+                max-height: 36px;
+                padding-bottom: 15px;
+            }
+
+            to {
+                max-height: 0px;
+                padding-bottom: 0px;
+            }
+        }
+
+        @keyframes accordion-5-retracting {
+            from {
+                max-height: 36px;
+                padding-bottom: 15px;
+            }
+
+            to {
+                max-height: 0px;
+                padding-bottom: 0px;
+            }
+        }
+
+        @keyframes accordion-6-retracting {
+            from {
+                max-height: 36px;
+                padding-bottom: 15px;
+            }
+
+            to {
+                max-height: 0px;
+                padding-bottom: 0px;
+            }
+        }
+
+        @keyframes accordion-7-retracting {
+            from {
+                max-height: 36px;
+                padding-bottom: 15px;
+            }
+
+            to {
+                max-height: 0px;
+                padding-bottom: 0px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+    <!--HEADER & NAV BAR SECTION-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Matthew Szurkowski</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#qualification" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i> Qualification
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i> Portfolio
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
 
-    <!--====== PRELOADER PART START ======-->
-
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                    </div>
+            <div class="nav__btns">
+                <!--THEME CHANGE BUTTON-->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!--====== PRELOADER PART ENDS ======-->
-
-    <!--====== HEADER PART START ======-->
-
-    <section id="home" class="header_area">
-        <div id="header_navbar" class="header_navbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img id="logo" src="assets/images/logo.png" alt="Logo" width="100em" height="100%">
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul id="nav" class="navbar-nav ml-auto">
-                                    <li class="nav-item">
-                                        <a class="page-scroll active" href="#home">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#about">About</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#skills">Skills</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#resume">Resume</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">Contact</a>
-                                    </li>
-                                </ul>
-                            </div> <!-- navbar collapse -->
-                        </nav> <!-- navbar -->
+        </nav>
+    </header>
+    <!--MAIN SECTION-->
+    <main class="main">
+        <!--HOME SECTION-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/matthew-szurkowski/" target="__blank"
+                            class="home__social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                        <a href="https://github.com/MatthewSzurkowski" target="__blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
                     </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header navbar -->
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path
+                                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                        165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                        129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                        -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                                <image class="home__blob-img" x='2' y='0' xlink:href="assets/img/main-pic.png" />
+                            </g>
+                        </svg>
+                    </div>
 
-        <div class="header_hero">
-            <div class="single_hero bg_cover d-flex align-items-center" style="background-image: url(assets/images/bg.jpg)">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8 col-md-10">
-                            <div class="hero_content text-center">
-                                <h2 class="hero_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Matthew Szurkowski</h2>
-                                <h4 id="sub-title" class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Software Engineering Student @ UofG</h4>
-                                <div id="media_links" class="footer_social pt-15">
-                                    <ul>
-                                        <li><a target=”_blank” href="https://github.com/MatthewSzurkowski"><i class="lni lni-github-original"></i></a></li>
-                                        <li><a target=”_blank” href="https://www.instagram.com/szurkowskalino/?hl=en"><i class="lni lni-instagram-original"></i></a></li>
-                                        <li><a target=”_blank” href="https://www.linkedin.com/in/matthew-szurkowski/"><i class="lni lni-linkedin-original"></i></a></li>
-                                    </ul>
+                    <div class="home__data">
+                        <h1 class="home__title">Hi, I'm Matthew 👋</h1>
+                        <h3 class="home__subtitle">💻 Software Developer</h3>
+                        <h3 class="home__subtitle">🖥️ Systems Dev ➡️ Co-operators</h3>
+                        <p class="home__description">Driven software engineer dedicated to creating groundbreaking technology that advances and enhances society.</p>
+                        <!--<p class="home__description">I'm currently searching for Summer 2022 and Fall 2023 internship opportunities.</p>-->
+                        <a href="#contact" class="button button--flex">
+                            Contact Me <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll Down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--ABOUT SECTION-->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span style="text-align:center" class="section__subtitle">My Introduction</span>
+            <div class="about__container container grid">
+                <img src="https://avatars.githubusercontent.com/u/61432155?v=4" 
+                alt="Garden in Vancouver" class="about__img">
+
+                <div class="about__data">
+                    <p class="about__description">Software developer and Entrepreneur
+                    </p>
+
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">3+</span>
+                            <span class="about__info-name">Years <br> Experience</span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">15+</span>
+                            <span class="about__info-name">Completed <br> Projects</span>
+                        </div>
+                    </div>
+                    <div class="about__buttons">
+                        <a download="" href="assets/pdf/Szurkowski_Matthew_Resume.pdf" class="button button--flex">
+                            Download CV<i class="uil uil-file-download button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--SKILLS SECTION-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My Technical Level</span>
+
+            <div class="skills__container container grid">
+                <div>
+                    <!--SKILLS 1-->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="uil uil-brackets-curly skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__titles">Frontend Development</h1>
+                                <span class="skills__subtitle">3+ years</span>
+                            </div>
+
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">HTML</h3>
                                 </div>
-                                <a href="#about" class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">About Me</a>
-                            </div> <!-- hero content -->
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">CSS</h3>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Javascript</h3>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">React/React Native</h3>
+                                </div>
+                            </div>
                         </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- single hero -->
-        </div> <!-- header hero -->
-    </section>
+                    </div>
+                    <!--SKILLS 2-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-server-network skills__icon"></i>
 
-    <!--====== HEADER PART ENDS ======-->
-    
-    <!--====== FEATURES PART START ======-->
+                            <div>
+                                <h1 class="skills__titles">Backend Development</h1>
+                                <span class="skills__subtitle">2+ years</span>
+                            </div>
 
-    <section id="about" class="features_area pt-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-25">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">About Me</h4>
-                        <!-- <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
-                            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p> -->
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-7">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.4s">
-                        <div class="portfolio-item center-block">
-                            <a href="#"><img class="img-portfolio img-responsive" src="assets/images/MyProfilePic.jpeg"></a>
+                            <i class="uil uil-angle-down skills__arrow"></i>
                         </div>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-7">
-                    <div class="single_features text-center mt-30 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.6s">
-                        <i class="lni lni-star"></i>
-                        <h4 class="features_title">Hi! I'm Matt.</a></h4>
-                        <p>I am a dedicated, diligent, and enthusiastic individual that has gained a wide set of skills and expertise. From programming languages to leadership, the skills I've learned will give me a leg up on the competition in my future ventures.</p>
-                    </div> <!-- single features -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
 
-    <!--====== FEATURES PART ENDS ======-->
-    
-    <!--====== ABOUT PART START ======-->
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Django</h3>
+                                </div>
+                            </div>
 
-    <!--====== ABOUT PART ENDS ======-->
-    
-    <!--====== FEATURES PART START ======-->
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Node Js</h3>
+                                </div>
+                            </div>
 
-    <section id="skills" class="features_area pt-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-25">
-                        <h4 id="my_skills" class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">My Skills</h4>
-                        <figure class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                            <blockquote class="blockquote">
-                              <p>"when love and skill work together, expect a masterpiece."</p>
-                            </blockquote>
-                            <figcaption class="blockquote-footer">
-                              <cite title="Source Title">John Ruskin</cite>
-                            </figcaption>
-                          </figure>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <i class="lni lni-code-alt"></i>
-                        <h4 class="features_title">Programming</h4>
-                        <p>Experienced in C, Python 3, Javascript, and HTML/CSS. Comfortable in Java and Bash. Familiar with C++, Lua, Perl, React, and MySQL.</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.3s">
-                        <i class="lni lni-clipboard"></i>
-                        <h4 class="features_title">Leadership</h4>
-                        <p>Leadership has always been an essential ability of mine, whether it was at Oakville Soccer Camp, teaching coding classes at MindKraft, or working as a residence assistant at UofG.</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.4s">
-                        <i class="lni lni-keyboard"></i>
-                        <h4 class="features_title">Frameworks</h4>
-                        <p>Assembled many projects using Bootstrap 5. Experimented with Flask, Express.js, Node.js, and jQuery.</p>
-                    </div> <!-- single features -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.2s">
-                        <i class="lni lni-magnifier"></i>
-                        <h4 class="features_title">Data Analysis</h4>
-                        <p>Developed several projects which utilized big data in CTS*2000. Created a data analysis project that utilized numerous datasets to determine which country had the greatest progression through COVID-19.</p>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_features text-center mt-60 wow fadeInUp" data-wow-duration="1.3s"
-                        data-wow-delay="0.3s">
-                        <i class="lni lni-users"></i>
-                        <h4 class="features_title">Team Player</h4>
-                        <p>Accelerated in team environments in and out of school. Demonstrated Agile and Waterfall software developement abilites in several software design courses.</p>
-                    </div> <!-- single features -->
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">FastAPI</h3>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Python</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--SKILLS 3-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="uil uil-cloud-database-tree skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__titles">DevOps</h1>
+                                <span class="skills__subtitle">More than 1 year</span>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Docker</h3>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Jenkins</h3>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Mongo DB</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> <!-- container -->
-    </section>
+        </section>
 
-    <!--====== FEATURES PART ENDS ======-->
-    
-    <!--====== PORTFOLIO PART START ======-->
+        <!--QUALIFICATIONS SECTION-->
+        <section class="qualification section" id="qualification">
+            <h2 class="section__title">Qualification</h2>
+            <span class="section__subtitle">My Personal Journey</span>
 
-    <section id="portfolio" class="portfolio_area pt-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-60">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">My Portfolio</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Projects I have created over the years.</p>
-                    </div> <!-- section title -->
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+                    <div class="qualification__button button--flex qualification__active" data-target="#education">
+                        <i class="uil uil-graduation-cap qualification__icon"></i>
+                        Education
+                    </div>
+
+                    <div class="qualification__button button--flex qualification__active" data-target="#work">
+                        <i class="uil uil-briefcase-alt qualification__icon"></i>
+                        Work
+                    </div>
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="portfolio_wrapper d-flex flex-wrap justify-content-center ">
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                <img src="assets/images/portfolio-1.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="https://github.com/MatthewSzurkowski/Fibonacci-Retracements"><i class="lni lni-github-original"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">Algo Trading</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-                <img src="assets/images/portfolio-2.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="https://github.com/MatthewSzurkowski/geniusClone"><i class="lni lni-github-original"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">GeniusClone</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-            <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                <img src="assets/images/portfolio-3.jpg" alt="portfolio">
-                <div class="portfolio_content">
-                    <ul class="meta">
-                        <li><a href="https://github.com/MatthewSzurkowski/MAC-Spoofing-Script"><i class="lni lni-github-original"></i></a></li>
-                    </ul>
-                    <h5 class="portfolio_title">macConfig</h5>
-                </div> <!-- Single portfolio -->
-            </div> <!-- portfolio wrapper -->
-        </div> <!-- row -->
-    </section>
 
-    <!--====== PORTFOLIO PART ENDS ======-->
-    
-    <!--====== PRICING PART START ======-->
+                <div class="qualification__sections">
+                    <!--QUALIFICATION CONTENT -->
+                    <div class="qualification__content qualification__active" data-content id="education">
+                        <!--QUALIFICATION 1-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Computer Science Honors</h3>
+                                <span class="qualification__subtitle">University of Guelph</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i>
+                                    September 2020 - April 2023
+                                </div>
+                            </div>
 
-    <section id="resume" class="pricing_area pt-120 pb-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center pb-25">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Resume</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Feel free to download my resume!</p>
-                        <div id="download-cv" class="container">
-                            <button type="button" class="btn btn-outline-success">
-                                <a href="Szurkowski_Matthew.pdf" title="Download CV" class="button button-primary" download="">Download CV</a>
-                            </button>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
                         </div>
-                    </div> <!-- section title -->
+                        <!--QUALIFICATION 2-->
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">Software Engineering Virtual Experience</h3>
+                                <span class="qualification__subtitle">JPMorganChase</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i>
+                                    December 2021
+                                </div>
+                            </div>
+                        </div>
+                        <!--QUALIFICATION 3-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Engineering Virtual Program</h3>
+                                <span class="qualification__subtitle">Goldman Sachs</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i>
+                                    December 2021
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                        <!--QUALIFICATION 4-->
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <!-- <span class="qualification__line"></span> -->
+                            </div>
+
+                            <div>
+                                <h3 class="qualification__title">Guidewire Certified Associate - InsuranceSuite Developer</h3>
+                                <span class="qualification__subtitle">Guidewire</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i>
+                                    April 2024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--JOB CONTENT -->
+                    <div class="qualification__content" data-content id="work">
+                        <!--JOB 1-->
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">Systems Developer</h3>
+                                <span class="qualification__subtitle">The Co-operators</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i>
+                                    May 2023 - Present
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Software Developer</h3>
+                                <span class="qualification__subtitle">Global Burden of Animal Diseases (GBADs)</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i>
+                                    January 2022 – April 2023
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                        <!--JOB 2-->
+                        <div class="qualification__data">
+                            <div></div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">Software Developer</h3>
+                                <span class="qualification__subtitle">Iona Systems Ltd. (Startup)</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i>
+                                    June 2022 - February 2023
+                                </div>
+                            </div>
+                        </div>
+                        <!--JOB 3-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Software Developer</h3>
+                                <span class="qualification__subtitle">University of Guelph</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i>
+                                    July 2022 - September 2022
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <!-- <span class="qualification__line"></span> -->
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+            </div>
+        </section>
 
-    <!--====== PRICING PART ENDS ======-->
-    
-    
-    
-    
-    
-    <!--====== CONTACT PART START ======-->
+        <!--PORTFOLIO SECTION-->
+        <section class="portfolio section" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+            <span class="section__subtitle">Most Recent Work</span>
 
-    <section id="contact" class="contact_area bg_cover pt-120 pb-130" style="background-image: url(assets/images/contact_bg.jpg)">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title section_title_2 text-center pb-25">
-                        <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Contact Me</h4>
-                        <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Shoot me a quick message and I'll get back to you!</p>
-                    </div> <!-- section title -->
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!--PORTFOLIO 1-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1iPAnTFNflq8MwPvyB0mNhLJSXv2VCBRnkw&s" alt="" class="portfolio__img">
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Trusted Animal Information portaL (TAIL)</h3>
+                            <p class="portfolio__description">designed to facilitate data exploration based on user queries related to various topics. Users can input specific queries, refine them with additional keywords, and explore relevant data, literature, or other related information</p>
+                            <a href="https://gbadske.org/search" target="_blank" class="button button--flex button--small portfolio__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--PORTFOLIO 2-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="https://gbadske.org/img/GBADsLogoRedesign.webp" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">gbadske.org</h3>
+                            <p class="portfolio__description">Used to display different documentation from GBADs, of developed technologies, and research by the GBADs research team</p>
+                            <a href="https://gbadske.org/" target="_blank"
+                                class="button button--flex button--small portfolio__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--PORTFOLIO 3-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="https://avatars.githubusercontent.com/u/117784990?s=200&v=4" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">ESW QR Prize Validation System</h3>
+                            <p class="portfolio__description">Fullstack application which generates QR codes that award prizes to those that win a game of plinko</p>
+                            <a href="https://github.com/orgs/ESW-UofG/repositories" target="_blank" class="button button--flex button--small portfolio__button">
+                                See repos
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--PORTFOLIO 4-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="https://camo.githubusercontent.com/9ef942e8a7e336e46266a6f919543646aed87f3f0d3153df63753f81138d39d4/68747470733a2f2f692e696d6775722e636f6d2f685658433969452e706e67" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Home Server File System (HSFS)</h3>
+                            <p class="portfolio__description">A ready-to-go home server file system</p>
+                            <a href="https://github.com/MatthewSzurkowski/HSFS" target="_blank" class="button button--flex button--small portfolio__button">
+                                Coming Soon
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!--PORTFOLIO 5-->
                 </div>
-            </div> <!-- row -->
-            
-            <form id="contact-form" action="https://formspree.io/f/mjvjopab" method="post" class="wow fadeInUp"
-                data-wow-duration="1.3s" data-wow-delay="0.4s">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="single_form">
-                            <input type="text" placeholder="Name" name="name" id="name" required>
-                        </div> <!-- single form -->
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="single_form">
-                            <input type="email" placeholder="Email" name="email" id="email" required>
-                        </div> <!-- single form -->
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="single_form">
-                            <input type="text" placeholder="Phone Number" name="number" id="number" required>
-                        </div> <!-- single form -->
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="single_form">
-                            <input type="text" placeholder="Subject" name="subject" id="subject" required>
-                        </div> <!-- single form -->
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="single_form">
-                            <textarea placeholder="Message" name="message" id="message" required></textarea>
-                        </div> <!-- single form -->
-                    </div>
-                    
-                    <p class="form-message"></p>
-                    
-                    <div class="col-lg-12">
-                        <div class="single_form text-center">
-                            <button class="main-btn" type="submit">SUBMIT</button>
-                        </div> <!-- single form -->
-                    </div>
-                </div> <!-- row -->
-            </form>
-        </div> <!-- container -->
-    </section>
 
-    <!--====== CONTACT PART ENDS ======-->
-    
-    <!--====== FOOTER PART START ======-->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
 
-    <footer id="footer" class="footer_area">
-        <div class="container">
-            <div class="footer_wrapper text-center d-lg-flex align-items-center justify-content-between">
-                <p class="credit">© 2021 Matthew Szurkowski.</p>
-                <div class="footer_social pt-15">
-                    <ul>
-                        <li><a target=”_blank” href="https://github.com/MatthewSzurkowski"><i class="lni lni-github-original"></i></a></li>
-                        <li><a target=”_blank” href="https://www.instagram.com/szurkowskalino/?hl=en"><i class="lni lni-instagram-original"></i></a></li>
-                        <li><a target=”_blank” href="https://www.linkedin.com/in/matthew-szurkowski/"><i class="lni lni-linkedin-original"></i></a></li>
-                    </ul>
-                </div> <!-- footer social -->
-            </div> <!-- footer wrapper -->
-        </div> <!-- container -->
+                <div class="swiper-pagination"></div>
+
+
+            </div>
+        </section>
+
+        <!--CONTACT SECTION-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get in touch</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Email Me</h3>
+                            <a href="mailto:mszurkow@gmail.com" target="__blank">
+                                <span class="contact__subtitle">mszurkow@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__subtitle"> 🏠 Oakville, Canada</span>
+                        </div>
+                    </div>
+                </div>
+                <form form action="https://formsubmit.co/mszurkow@gmail.com" method="POST"
+                    class="contact__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Name</label>
+                            <input type="text" name="name" class="contact__input" required>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Email</label>
+                            <input type="email" class="contact__input" name="email" required>
+                            <input type="hidden" name="_subject" value="New submission from Website!">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="button button__flex">
+                                Send Message
+                                <i class="uil uil-message button__icon"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER SECTION-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">
+                        <!--<img src="assets/img/transparent-logo.png">-->
+                        Matthew Szurkowski
+                    </h1>
+                    <span class="footer__subtitle">Software Developer</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#about" class="footer__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="footer__link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.linkedin.com/in/matthew-szurkowski/" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                    <a href="https://github.com/MatthewSzurkowski" class="footer__social">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; Matthew Szurkowski. All right reserved</p>
+        </div>
     </footer>
 
-    <!--====== FOOTER PART ENDS ======-->
-    
-    <!--====== BACK TOP TOP PART START ======-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
-    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
-    <!--====== BACK TOP TOP PART ENDS ======-->
-
-    
-    <!--====== Bootstrap js ======-->
-    <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
-    
-    <!--====== glide js ======-->
-    <script src="assets/js/glide.min.js"></script>
-    
-    <!--====== wow js ======-->
-    <script src="assets/js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    
-    <!--====== Contact Form js ======-->
-    <script src="assets/js/contact-form.js"></script>
-    
-    <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
-    
 </body>
 
 </html>

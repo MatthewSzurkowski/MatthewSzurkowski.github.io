@@ -1,109 +1,148 @@
-(function() {
-    
-    "use strict";
-    
-    //===== Prealoder
+const navMenu = document.getElementById('nav-menu'),
+        navToggle = document.getElementById('nav-toggle'),
+        navClose = document.getElementById('nav-close')
 
-    window.onload = function() {
-        window.setTimeout(fadeout, 500);
+if(navToggle){
+    navToggle.addEventListener('click',() =>{
+        navMenu.classList.add('show-menu')
+    })
+}
+
+if(navClose){
+    navClose.addEventListener('click', () =>{
+        navMenu.classList.remove('show-menu')
+    })
+}
+
+const navLink = document.querySelectorAll('.nav__link')
+
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu')
+    navMenu.classList.remove('show-menu')
+}
+
+navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/* Arrow Toggle Implementation*/
+
+const skillsContent = document.getElementsByClassName('skills__content'),
+      skillsHeader = document.querySelectorAll('.skills__header')
+
+function toggleSkills(){
+    let itemClass = this.parentNode.className
+
+    for(i = 0; i < skillsContent.length; i++){
+        skillsContent[i].className = 'skills__content skills__close'
     }
 
-    function fadeout() {
-        document.querySelector('.preloader').style.opacity = '0';
-        document.querySelector('.preloader').style.display = 'none';
+    if(itemClass === 'skills__content skills__close'){
+        this.parentNode.className = 'skills__content skills__open'
     }
+}
 
-    
-    /*=====================================
-    Sticky
-    ======================================= */
-    window.onscroll = function () {
-        var header_navbar = document.getElementById("header_navbar");
-        var logo = document.querySelector("img#logo");
-        var sticky = header_navbar.offsetTop;
+skillsHeader.forEach((el) => {
+    el.addEventListener('click', toggleSkills)
+})
 
-        if (window.pageYOffset > sticky) {
-            header_navbar.classList.add("sticky");
-            logo.setAttribute("src", "assets/images/logo-2.png")
-        } else {
-            header_navbar.classList.remove("sticky");
-            logo.setAttribute("src", "assets/images/logo.png")
-        }
+/* Qualification Tab Implementation*/
 
+const tabs = document.querySelectorAll('[data-target]'),
+      tabContents = document.querySelectorAll('[data-content]')
 
+tabs.forEach(tab =>{
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.target)
 
-        // show or hide the back-top-top button
-        var backToTo = document.querySelector(".back-to-top");
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            backToTo.style.display = "block";
-        } else {
-            backToTo.style.display = "none";
-        }
-    };
-
-    // Get the navbar
-
-
-    // for menu scroll 
-    var pageLink = document.querySelectorAll('.page-scroll');
-    
-    pageLink.forEach(elem => {
-        elem.addEventListener('click', e => {
-            e.preventDefault();
-            document.querySelector(elem.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth',
-                offsetTop: 1 - 60,
-            });
-        });
-    });
-
-    // section menu active
-    function onScroll(event) {
-        var sections = document.querySelectorAll('.page-scroll');
-        var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
-        for (var i = 0; i < sections.length; i++) {
-            var currLink = sections[i];
-            var val = currLink.getAttribute('href');
-            var refElement = document.querySelector(val);
-            var scrollTopMinus = scrollPos + 73;
-            if (refElement.offsetTop <= scrollTopMinus && (refElement.offsetTop + refElement.offsetHeight > scrollTopMinus)) {
-                document.querySelector('.page-scroll').classList.remove('active');
-                currLink.classList.add('active');
-            } else {
-                currLink.classList.remove('active');
-            }
-        }
-    };
-
-    window.document.addEventListener('scroll', onScroll);
-
-
-    //===== close navbar-collapse when a  clicked
-    let navbarToggler = document.querySelector(".navbar-toggler");    
-    var navbarCollapse = document.querySelector(".navbar-collapse");
-
-    document.querySelectorAll(".page-scroll").forEach(e =>
-        e.addEventListener("click", () => {
-            navbarToggler.classList.remove("active");
-            navbarCollapse.classList.remove('show')
+        tabContents.forEach(tabContent =>{
+            tabContent.classList.remove('qualification__active')
         })
-    );
+        target.classList.add('qualification__active')
 
+        tabs.forEach(tab => {
+            tab.classList.remove('qualification__active')
+        })
+        tab.classList.add('qualification__active')
+    })
+})
 
-    //===== glide slider for testimonial
-    
-    new Glide('.glide', {
-        type: 'slider',
-        perView: 1,
-        animationDuration: 1000
-    }).mount()
+/* Portfolio Slider Implementation*/
+let swiper = new Swiper(".portfolio__container", {
+    cssMode: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
 
-    //WOW Scroll Spy
-    var wow = new WOW({
-        //disabled for mobile
-        mobile: false
-    });
-    wow.init();
-    
-})();
+/* Scroll Section Implementation*/
+
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
+/* Scroll Header Implementation*/
+
+function scrollHeader(){
+    const nav = document.getElementById('header')
+    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+    if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
+
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
+
+/* DARK THEME Implementation*/
+
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'uil-sun'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
