@@ -5,7 +5,7 @@
 
     /* COLORS */
 
-    --hue-color: 125; /* Light blue 185 */
+    --hue-color: 190; /* Light blue 185 */
 
     --first-color: hsl(var(--hue-color), 69%, 61%);
 
@@ -311,9 +311,12 @@ img{
     color: var(--first-color-alt);
 }
 
-.home__blob{
-    width: 200px;
-    fill: var(--first-color);
+.home__blob {
+
+    background-image: url('../img/main-pic.jpg'); /* Replace with your actual image path */
+    background-size: cover; /* Ensures the image covers the entire blob */
+    background-position: center; /* Ensures the image is centered */
+    border-radius: 50%; /* Makes the blob circular */
 }
 
 .home__blob-img{
