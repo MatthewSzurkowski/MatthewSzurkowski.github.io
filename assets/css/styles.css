@@ -5,7 +5,7 @@
 
     /* COLORS */
 
-    --hue-color: 190; /* Light blue 185 */
+    --hue-color: 204;
 
     --first-color: hsl(var(--hue-color), 69%, 61%);
 
