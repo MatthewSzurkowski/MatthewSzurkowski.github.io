@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -435,43 +434,40 @@
         }
 
         images.forEach((item, index) => {
-          const src = typeof item === "string" ? item : item.src;
+            const src = typeof item === "string" ? item : item.src;
 
-          if (typeof src !== "string" || !src.trim()) {
-            return;
-          }
-
-          const filename = src.split("/").pop();
-          const name = typeof item === "string"
-            ? filename
-                .replace(/\.[^.]+$/, "")
-                .replace(/[-_]+/g, " ")
-            : (item.alt || `Photo ${index + 1}`);
-
-          const button = document.createElement("button");
-          button.className = "photo";
-          button.type = "button";
-          button.setAttribute("aria-label", `View ${name}`);
-
-          const img = document.createElement("img");
-          img.alt = name;
-          img.loading = "lazy";
-          img.decoding = "async";
-
-          // Reveal each image when it has loaded successfully.
-          img.addEventListener("load", () => {
-            button.classList.add("is-loaded");
-          });
-
-          // Remove broken images from the gallery.
-          img.addEventListener("error", () => {
-            button.remove();
-            updateCount();
-
-            if (gallery.children.length === 0) {
-              empty.hidden = false;
+            if (typeof src !== "string" || !src.trim()) {
+                return;
             }
-          });
+
+            const filename = src.split("/").pop();
+            const name = typeof item === "string"
+                ? filename
+                    .replace(/\.[^.]+$/, "")
+                    .replace(/[-_]+/g, " ")
+                : (item.alt || `Photo ${index + 1}`);
+
+            const button = document.createElement("button");
+            button.className = "photo";
+            button.type = "button";
+            button.setAttribute("aria-label", `View ${name}`);
+
+            const img = document.createElement("img");
+            img.alt = name;
+            img.decoding = "async";
+            img.loading = "lazy";
+
+            img.addEventListener("load", () => {
+            button.classList.add("is-loaded");
+            });
+
+            img.addEventListener("error", () => {
+            // Don't remove a tile if it was already loaded successfully.
+            if (!button.classList.contains("is-loaded")) {
+                button.remove();
+                updateCount();
+            }
+            });
 
           button.appendChild(img);
 
@@ -506,4 +502,3 @@
   </script>
 </body>
 </html>
-```
