@@ -1,735 +1,480 @@
 <!DOCTYPE html>
-<html lang="eng">
-
-
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matthew Szurkowski</title>
+<meta name="description" content="Links, store and videos from Matthew Szurkowski.">
+<meta name="theme-color" content="#141414">
+<meta property="og:title" content="Matthew Szurkowski">
+<meta property="og:description" content="Links, store and videos from Matthew Szurkowski.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<style>
+  :root {
+    --bg: #141414;
+    --surface: #242424;
+    --surface-2: #1b1b1b;
+    --pill: #3a3a3a;
+    --line: #2c2c2c;
+    --text: #f4f4f4;
+    --muted: #9a9a9a;
+    --radius-thumb: 14px;
+    --radius-card: 16px;
+    --maxw: 100%;
+    --content-max: 1100px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  :focus-visible { outline: 2px solid #fff; outline-offset: 3px; border-radius: 8px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  .page { width: 100%; max-width: var(--maxw); margin: 0 auto; min-height: 100vh; position: relative; }
 
-    <link rel="stylesheet" href="assets/css/styles.css">
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    aspect-ratio: 4 / 4.6;
+    max-height: 78vh;
+    width: 100%;
+    overflow: hidden;
+    background: #222;
+  }
+  .hero-img, .hero-fallback { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero-fallback {
+    background:
+      radial-gradient(120% 80% at 20% 15%, #3d6b4f 0%, transparent 55%),
+      radial-gradient(90% 70% at 85% 30%, #b99a5b 0%, transparent 50%),
+      linear-gradient(160deg, #1c2a22, #101512);
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: auto 0 0 0; height: 38%;
+    background: linear-gradient(to bottom, rgba(20,20,20,0), var(--bg));
+  }
+  .hero-top { position: absolute; inset: 0 0 auto 0; height: env(safe-area-inset-top, 0px); }
+  .hero-bottom {
+    position: absolute; left: 0; right: 0; bottom: 14px; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+  }
+  .hero-name { font-size: 22px; font-weight: 600; letter-spacing: -0.01em; }
+  .socials { display: flex; gap: 22px; align-items: center; }
+  .socials a { display: grid; place-items: center; width: 28px; height: 28px; opacity: .95; transition: transform .15s ease, opacity .15s ease; }
+  .socials a:hover { transform: translateY(-2px); opacity: 1; }
+  .socials svg { width: 22px; height: 22px; fill: none; stroke: #fff; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
 
-    <title>Matthew Szurkowski</title>
+  /* ---------- Sticky pill nav ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 20;
+    padding: calc(10px + env(safe-area-inset-top, 0px)) 0 10px;
+    background: rgba(20,20,20,.88);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  }
+  .nav-scroll {
+    display: flex; gap: 4px; overflow-x: auto; padding: 0 16px;
+    scrollbar-width: none; -ms-overflow-style: none;
+    scroll-snap-type: x proximity;
+  }
+  .nav-scroll::-webkit-scrollbar { display: none; }
+  .nav a {
+    flex: 0 0 auto; padding: 8px 12px; border-radius: 10px; font-size: 15px; font-weight: 500;
+    color: #d8d8d8; white-space: nowrap; transition: background .2s ease, color .2s ease;
+    scroll-snap-align: start;
+  }
+  .nav a[aria-current="true"] { background: var(--pill); color: #fff; }
 
-    <!--====== Favicon Icon ======-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/imgfavicon.ico">
+  /* ---------- Sections ---------- */
+  main { padding: 0 16px 56px; }
+  .section { padding: 22px 0 24px; border-bottom: 1px solid var(--line); scroll-margin-top: 64px; }
+  .section:last-of-type { border-bottom: 0; }
+  .section-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .section h2 { font-size: 21px; font-weight: 500; letter-spacing: -0.01em; }
 
-    <meta name="generator" content="Hugo 0.83.1">
-    <meta name="author" content="Matthew Szurkowski">
-    <meta name="description"
-        content="The portfolio of Matthew Szurkowski, a software developer. He is currently a Software Developer at Definity. He is a passionate programmer and a great team player.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mattszurkowski.com">
-    <meta property="og:title" content="Matthew Szurkowski">
-    <meta property="og:description"
-        content="The portfolio of Matthew Szurkowski, a software developer. He is currently a Software Developer at Definity. He is a passionate programmer and a great team player.">
-    <meta property="og:image" content="assets/img/logo.png">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://mattszurkowski.com">
-    <meta property="twitter:title" content="Matthew Szurkowski">
-    <meta property="twitter:description"
-        content="The portfolio of Matthew Szurkowski, a software developer. He is currently a Software Developer at Definity. He is a passionate programmer and a great team player.">
-    <meta property="twitter:image" content="assets/img/logo.png">
-    <meta http-equiv="cache-control" content="no-cache">
-    <style>
-        @keyframes accordion-0-retracting {
-            from {
-                max-height: 36px;
-                padding-bottom: 15px;
-            }
+  /* Link / product cards: thumbnail overlaps the left edge of a darker card */
+  .card { position: relative; display: block; margin-bottom: 12px; padding-left: 0; }
+  .card:last-child { margin-bottom: 0; }
+  .card-body {
+    display: flex; align-items: center; min-height: 128px;
+    margin-left: 62px; padding: 14px 18px 14px 74px;
+    background: var(--surface); border-radius: var(--radius-card);
+    transition: background .2s ease;
+  }
+  a.card:hover .card-body { background: #2b2b2b; }
+  .thumb {
+    position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 120px; height: 120px; border-radius: var(--radius-thumb); overflow: hidden;
+    background: #333; z-index: 1;
+  }
+  .thumb img, .thumb .ph { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card-title { font-size: 15px; font-weight: 500; }
+  .card-price { font-size: 15px; color: #cfcfcf; margin-top: 4px; }
+  .card-text { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+  .buy {
+    margin-top: 12px; padding: 5px 14px; border: 1.5px solid #fff; border-radius: 999px;
+    font-size: 14px; font-weight: 500; background: transparent; transition: background .2s ease, color .2s ease;
+  }
+  a.card:hover .buy, .buy:hover { background: #fff; color: #111; }
 
-            to {
-                max-height: 0px;
-                padding-bottom: 0px;
-            }
-        }
+  /* ---------- Carousel ---------- */
+  .arrows { display: flex; gap: 14px; }
+  .arrows button { width: 28px; height: 28px; display: grid; place-items: center; color: var(--muted); border-radius: 8px; transition: color .15s ease; }
+  .arrows button:hover:not(:disabled) { color: #fff; }
+  .arrows button:disabled { opacity: .35; cursor: default; }
+  .arrows svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+  .carousel {
+    display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+    margin: 0 -16px; padding: 0 16px; scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar { display: none; }
+  .clip {
+    flex: 0 0 calc(44% - 6px); aspect-ratio: 9 / 16; scroll-snap-align: start;
+    position: relative; border-radius: 14px; overflow: hidden; background: #0e0e0e; display: block;
+  }
+  .clip img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .play {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: 46px; height: 46px; border-radius: 50%; background: #fff; display: grid; place-items: center;
+    transition: transform .15s ease;
+  }
+  .clip:hover .play { transform: translate(-50%, -50%) scale(1.08); }
+  .play svg { width: 18px; height: 18px; fill: #1d3b57; margin-left: 2px; }
 
-        @keyframes accordion-1-retracting {
-            from {
-                max-height: 36px;
-                padding-bottom: 15px;
-            }
+  /* ---------- Footer ---------- */
+  footer { padding: 8px 16px 40px; text-align: center; color: var(--muted); font-size: 13px; }
 
-            to {
-                max-height: 0px;
-                padding-bottom: 0px;
-            }
-        }
+  @media (min-width: 640px) {
+    body { background: var(--bg); }
+    .page { width: 100%; max-width: 100%; background: var(--bg); box-shadow: none; }
+    .hero { aspect-ratio: 16 / 7; max-height: 620px; min-height: 320px; }
+    .hero-bottom { bottom: 28px; gap: 16px; }
+    .hero-name { font-size: clamp(28px, 3vw, 42px); }
+    .socials { gap: 26px; }
+    .socials a { width: 34px; height: 34px; }
+    .socials svg { width: 25px; height: 25px; }
+    .nav { padding: 12px 24px; }
+    .nav-scroll { justify-content: center; flex-wrap: wrap; overflow: visible; padding: 0; gap: 8px; }
+    .nav a { padding: 9px 15px; }
+    main { max-width: var(--content-max); margin-inline: auto; padding: 0 32px 72px; }
+    .section { padding: 30px 0 34px; scroll-margin-top: 82px; }
+    .section-head { margin-bottom: 18px; }
+    .section h2 { font-size: 24px; }
+    .card-body { min-height: 132px; margin-left: 74px; padding: 18px 24px 18px 78px; }
+    .thumb { width: 124px; height: 124px; }
+    .card-title, .card-price { font-size: 16px; }
+    .carousel { margin: 0; padding: 2px 0 8px; gap: 18px; }
+    .clip { flex-basis: clamp(180px, 22%, 240px); }
+    footer { padding: 16px 32px 48px; }
+  }
 
-        @keyframes accordion-2-retracting {
-            from {
-                max-height: 36px;
-                padding-bottom: 15px;
-            }
+  @media (min-width: 900px) {
+    .hero { aspect-ratio: 16 / 6; }
+    .hero::after { height: 48%; }
+    .hero-bottom { bottom: 36px; }
+    main { padding-inline: 48px; }
+    .section { padding-block: 36px 40px; }
+    .section-head { margin-bottom: 20px; }
+    .section h2 { font-size: 26px; }
+    .card-body { min-height: 148px; margin-left: 82px; padding-left: 82px; }
+    .thumb { width: 136px; height: 136px; }
+    .clip { flex-basis: 200px; }
+  }
 
-            to {
-                max-height: 0px;
-                padding-bottom: 0px;
-            }
-        }
+  @media (max-width: 639px) {
+    .page { width: 100%; max-width: 100%; }
+    .hero { aspect-ratio: 4 / 4.6; max-height: 78vh; min-height: 0; }
+    .nav { padding: calc(10px + env(safe-area-inset-top, 0px)) 0 10px; }
+    .nav-scroll { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; padding: 0 16px; gap: 4px; }
+    main { padding: 0 16px 56px; }
+    .section { padding: 22px 0 24px; scroll-margin-top: 64px; }
+    .section h2 { font-size: 21px; }
+    .card-body { min-height: 128px; margin-left: 62px; padding: 14px 18px 14px 74px; }
+    .thumb { width: 120px; height: 120px; }
+    .carousel { margin: 0 -16px; padding: 0 16px; gap: 12px; }
+    .clip { flex-basis: calc(44% - 6px); }
+    footer { padding: 8px 16px 40px; }
+  }
 
-        @keyframes accordion-3-retracting {
-            from {
-                max-height: 54px;
-                padding-bottom: 15px;
-            }
-
-            to {
-                max-height: 0px;
-                padding-bottom: 0px;
-            }
-        }
-
-        @keyframes accordion-4-retracting {
-            from {
-                max-height: 36px;
-                padding-bottom: 15px;
-            }
-
-            to {
-                max-height: 0px;
-                padding-bottom: 0px;
-            }
-        }
-
-        @keyframes accordion-5-retracting {
-            from {
-                max-height: 36px;
-                padding-bottom: 15px;
-            }
-
-            to {
-                max-height: 0px;
-                padding-bottom: 0px;
-            }
-        }
-
-        @keyframes accordion-6-retracting {
-            from {
-                max-height: 36px;
-                padding-bottom: 15px;
-            }
-
-            to {
-                max-height: 0px;
-                padding-bottom: 0px;
-            }
-        }
-
-        @keyframes accordion-7-retracting {
-            from {
-                max-height: 36px;
-                padding-bottom: 15px;
-            }
-
-            to {
-                max-height: 0px;
-                padding-bottom: 0px;
-            }
-        }
-    </style>
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
 </head>
 
 <body>
-    <!--HEADER & NAV BAR SECTION-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">Matthew Szurkowski</a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> About
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class="uil uil-file-alt nav__icon"></i> Skills
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#qualification" class="nav__link">
-                            <i class="uil uil-briefcase-alt nav__icon"></i> Qualification
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Portfolio
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> Contact
-                        </a>
-                    </li>
-                </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
-            </div>
+<div class="page">
+  <header class="hero" id="top">
+    <div class="hero-top"></div>
+    <div class="hero-bottom">
+      <h1 class="hero-name" id="name"></h1>
+      <nav class="socials" id="socials" aria-label="Social links"></nav>
+    </div>
+  </header>
 
-            <div class="nav__btns">
-                <!--THEME CHANGE BUTTON-->
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!--MAIN SECTION-->
-    <main class="main">
-        <!--HOME SECTION-->
-        <section class="home section" id="home">
-            <div class="home__container container grid">
-                <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/in/matthew-szurkowski/" target="__blank"
-                            class="home__social-icon">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-                        <a href="https://github.com/MatthewSzurkowski" target="__blank" class="home__social-icon">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                    </div>
-                    <div class="home__img">
-                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                        130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                        97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                        0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                            </mask>
-                           
-                        </svg>
-                    </div>
+  <nav class="nav" aria-label="Sections"><div class="nav-scroll" id="nav"></div></nav>
 
-                    <div class="home__data">
-                        <h1 class="home__title">Hi, I'm Matthew 👋</h1>
-                        <h3 class="home__subtitle">💻 Software Developer</h3>
-                        <h3 class="home__subtitle">🖥️ Software Dev ➡️ Definity</h3>
-                        <p class="home__description">Driven software engineer dedicated to creating groundbreaking technology that advances and enhances society.</p>
-                        <!--<p class="home__description">I'm currently searching for Summer 2022 and Fall 2023 internship opportunities.</p>-->
-                        <a href="#contact" class="button button--flex">
-                            Contact Me <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
-                </div>
+  <main id="sections"></main>
 
-                <div class="home__scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
-                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Scroll Down</span>
-                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                    </a>
-                </div>
+  <footer>© <span id="year"></span> Matthew Szurkowski</footer>
+</div>
 
-            </div>
-        </section>
+<script>
+/* =====================================================================
+   EDIT THIS BLOCK — everything on the page is generated from CONFIG.
+   Images: use a path like "assets/images/hero.jpg" (commit them to the repo)
+   or a full URL. Leave "image" empty to show a colour placeholder.
+   ===================================================================== */
+document.getElementById("year").textContent =
+      new Date().getFullYear();
+const CONFIG = {
+  name: "Matthew Szurkowski",
+  showNameOnHero: true,
+  heroImage: "assets/images/PICT0687.jpeg",                      // e.g. "assets/images/hero.jpg"
 
-        <!--ABOUT SECTION-->
-        <section class="about section" id="about">
-            <h2 class="section__title">About Me</h2>
-            <span style="text-align:center" class="section__subtitle">My Introduction</span>
-            <div class="about__container container grid">
-                <img src="assets/img/star.jpeg" 
-                alt="Woods in Oakville, ON" class="about__img">
+  socials: [
+    { type: "instagram", url: "https://instagram.com/mszurkow" },
+    { type: "appleMusic", url: "https://music.apple.com/profile/mszurkow" },
+    { type: "linkedin", url: "https://linkedin.com/in/matt-szurkowski" },
+    { type: "github", url: "https://github.com/MatthewSzurkowski" }
+    // also available: "youtube", "x", "link"
+  ],
 
-                <div class="about__data">
-                    <p class="about__description">Software developer and Entrepreneur
-                    </p>
+  sections: [
+    { id: "resume", title: "Resume", type: "links", items: [
+        { title: "My resume", url: "assets/pdf/Szurkowski_Matthew.pdf", image: "assets/images/mszurkow.jpg" }
+    ]},
+    // type: "pics"
+    { id: "gallery", title: "Gallery", type: "pics", items: [
+        // price: "$70.00", cta: "Buy Now"
+        { title: "My photo gallery", url: "gallery.html", image: "assets/images/scarab.jpg" }
+    ]},
+    // { id: "discord", title: "Community Discord", type: "links", items: [
+    //     { title: "Discord", url: "https://discord.com", image: "" }
+    // ]},
+    // { id: "waitlist", title: "Waitlist", type: "links", items: [
+    //     { title: "Join the Waitlist", url: "https://example.com/waitlist", image: "" }
+    // ]},
+    { id: "playlist", title: "Latest Playlist", type: "links", items: [
+        { title: "MAAS Effect 🤿 ", url: "https://music.apple.com/ca/playlist/maas-effect/pl.u-DdANvgaTjD6Lzp", image: "https://is1-ssl.mzstatic.com/image/thumb/SG-MQ-US-001-Image000001/v4/37/65/3a/37653a0f-4113-72e8-162d-603d838ba338/image/400x400cc.webp" }
+    ]},
+    { id: "projects", title: "Projects", type: "carousel", items: [
+        { url: "https://gbadske.org/", image: "assets/images/GBADsLogoRedesign.webp" },
+        { url: "https://github.com/MatthewSzurkowski/TasteTwin", image: "assets/images/tastetwin.png" },
+        { url: "https://github.com/orgs/ESW-UofG/repositories", image: "assets/images/ESW.jpg" },
+        { url: "https://github.com/MatthewSzurkowski/HSFS", image: "assets/images/servers.png" },
+    ]}
+  ]
+};
+/* ===================================================================== */
 
-                    <div class="about__info">
-                        <div>
-                            <span class="about__info-title">3+</span>
-                            <span class="about__info-name">Years <br> Experience</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title">15+</span>
-                            <span class="about__info-name">Completed <br> Projects</span>
-                        </div>
-                    </div>
-                    <div class="about__buttons">
-                        <a download="" href="assets/pdf/Szurkowski_Matthew.pdf" class="button button--flex">
-                            Download CV<i class="uil uil-file-download button__icon"></i>
-                        </a>
-                    </div>
-                </div>
+// const ICONS = {
+//   instagram: '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="#fff"/>',
+//   twitch:    '<path d="M4 3.5h16v10.5l-4 4h-3.5L10 20.5v-2.5H4z"/><path d="M15 8v4M11 8v4"/>',
+//   tiktok:    '<path d="M14 4v10.2a3.7 3.7 0 1 1-3.7-3.7"/><path d="M14 4c.4 2.6 2.1 4.2 4.8 4.4"/>',
+//   spotify:   '<circle cx="12" cy="12" r="9"/><path d="M7.2 9.6c3.2-.9 6.6-.6 9.6 1"/><path d="M7.8 12.6c2.7-.7 5.4-.4 7.9.9"/><path d="M8.4 15.4c2.2-.5 4.2-.3 6.2.7"/>',
+//   youtube:   '<rect x="2.8" y="5.5" width="18.4" height="13" rx="4"/><path d="M10.2 9.4v5.2l4.4-2.6z" fill="#fff"/>',
+//   x:         '<path d="M5 4.5l14 15M19 4.5l-6.2 6.7M11.2 12.8L5 19.5"/>',
+//   link:      '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>'
+// };
+const ICONS = {
+  instagram: '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="#fff"/>',
+  appleMusic: '<path d="M16 3v12.5a3.5 3.5 0 1 1-2-3.16V6l-7 1.5v10a3.5 3.5 0 1 1-2-3.16V5.5L16 3z"/>',
+  linkedin: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-7h3v1.2a3 3 0 0 1 3-1.2v7"/>',
+  github: '<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.2-.4-3.8 1.4a13.2 13.2 0 0 0-6.9 0C5.5 1.2 4.3 1.6 4.3 1.6a4.8 4.8 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22"/>',
+  link: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>'
+};
 
-            </div>
-        </section>
+/* Placeholder art so the page looks finished before you add photos */
+const PALETTES = [
+  ["#2b2b2b", "#e8e8e8"], ["#243b5a", "#8fb4e8"], ["#3b2a52", "#c9a6f0"],
+  ["#4a2c2c", "#f0a6a6"], ["#26453a", "#9fe0c4"]
+];
+function placeholder(i) {
+  const [a, b] = PALETTES[i % PALETTES.length];
+  const el = document.createElement("div");
+  el.className = "ph";
+  el.style.background = `radial-gradient(circle at 70% 30%, ${b}55, transparent 60%), linear-gradient(135deg, ${a}, #161616)`;
+  return el;
+}
 
-        <!--SKILLS SECTION-->
-        <section class="skills section" id="skills">
-            <h2 class="section__title">Skills</h2>
-            <span class="section__subtitle">My Technical Level</span>
+function h(tag, attrs = {}, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") el.className = v;
+    else if (k === "html") el.innerHTML = v;
+    else el.setAttribute(k, v);
+  }
+  kids.flat().forEach(k => k != null && el.append(k));
+  return el;
+}
+function img(src, alt = "") {
+  const i = h("img", { src, alt, loading: "lazy", decoding: "async" });
+  return i;
+}
+const external = { target: "_blank", rel: "noopener noreferrer" };
 
-            <div class="skills__container container grid">
-                <div>
-                    <!--SKILLS 1-->
-                    <div class="skills__content skills__open">
-                        <div class="skills__header">
-                            <i class="uil uil-brackets-curly skills__icon"></i>
+/* ---- Hero ---- */
+document.title = CONFIG.name;
+const hero = document.getElementById("top");
+if (CONFIG.heroImage) {
+  const i = h("img", { class: "hero-img", src: CONFIG.heroImage, alt: "" });
+  hero.prepend(i);
+} else {
+  hero.prepend(h("div", { class: "hero-fallback" }));
+}
+const nameEl = document.getElementById("name");
+nameEl.textContent = CONFIG.name;
+if (!CONFIG.showNameOnHero) nameEl.classList.add("sr-only");
 
-                            <div>
-                                <h1 class="skills__titles">Frontend Development</h1>
-                                <span class="skills__subtitle">3+ years</span>
-                            </div>
+const socials = document.getElementById("socials");
+CONFIG.socials.forEach(s => {
+  socials.append(h("a", { href: s.url, "aria-label": s.type, ...external },
+    h("span", { html: `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[s.type] || ICONS.link}</svg>` })));
+});
 
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
+/* ---- Sections ---- */
+const sectionsEl = document.getElementById("sections");
+const navEl = document.getElementById("nav");
+let phIndex = 0;
 
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">HTML</h3>
-                                </div>
-                            </div>
+function thumb(src, alt) {
+  const t = h("div", { class: "thumb" });
+  t.append(src ? img(src, alt) : placeholder(phIndex++));
+  return t;
+}
 
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">CSS</h3>
-                                </div>
-                            </div>
+CONFIG.sections.forEach(sec => {
+  navEl.append(h("a", { href: "#" + sec.id, "data-id": sec.id }, sec.title));
 
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Javascript</h3>
-                                </div>
-                            </div>
+  const wrap = h("section", { class: "section", id: sec.id, "aria-labelledby": sec.id + "-h" });
+  const head = h("div", { class: "section-head" }, h("h2", { id: sec.id + "-h" }, sec.title));
+  wrap.append(head);
 
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">React/React Native</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--SKILLS 2-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-server-network skills__icon"></i>
+  if (sec.type === "links") {
+    sec.items.forEach(it => wrap.append(
+      h("a", { class: "card", href: it.url, ...external },
+        thumb(it.image, ""),
+        h("div", { class: "card-body" }, h("span", { class: "card-title" }, it.title)))
+    ));
+  }
 
-                            <div>
-                                <h1 class="skills__titles">Backend Development</h1>
-                                <span class="skills__subtitle">2+ years</span>
-                            </div>
+//   if (sec.type === "products") {
+//     sec.items.forEach(it => wrap.append(
+//       h("a", { class: "card", href: it.url, ...external },
+//         thumb(it.image, ""),
+//         h("div", { class: "card-body" },
+//           h("div", { class: "card-text" },
+//             h("span", { class: "card-title" }, it.title),
+//             it.price ? h("span", { class: "card-price" }, it.price) : null,
+//             h("span", { class: "buy" }, it.cta || "Buy Now"))))
+//     ));
+//   }
+if (sec.type === "pics") {
+    sec.items.forEach(it => wrap.append(
+      h("a", { class: "card", href: it.url, ...external },
+        thumb(it.image, ""),
+        h("div", { class: "card-body" },
+          h("div", { class: "card-text" },
+            h("span", { class: "card-title" }, it.title))))
+            // it.price ? h("span", { class: "card-price" }, it.price) : null,
+            // h("span", { class: "buy" }, it.cta || "Buy Now"))))
+    ));
+  }
 
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
+  if (sec.type === "carousel") {
+    const prev = h("button", { "aria-label": "Previous", html: '<svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>' });
+    const next = h("button", { "aria-label": "Next", html: '<svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>' });
+    head.append(h("div", { class: "arrows" }, prev, next));
 
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Django</h3>
-                                </div>
-                            </div>
+    const track = h("div", { class: "carousel", tabindex: "0", "aria-label": sec.title + " videos" });
+    sec.items.forEach((it, n) => {
+      const c = h("a", { class: "clip", href: it.url, "aria-label": "Play video " + (n + 1), ...external });
+      if (it.image) c.append(img(it.image, ""));
+    //   c.append(h("span", { class: "play", html: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg>' }));
+      track.append(c);
+    });
+    wrap.append(track);
 
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Node Js</h3>
-                                </div>
-                            </div>
+    const step = () => track.clientWidth * 0.5;
+    const sync = () => {
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    };
+    prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+    next.addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
+    track.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("resize", sync);
+    requestAnimationFrame(sync);
+  }
 
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">FastAPI</h3>
-                                </div>
-                            </div>
+  sectionsEl.append(wrap);
+});
 
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Python</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--SKILLS 3-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-cloud-database-tree skills__icon"></i>
+/* ---- Scroll-spy for the pill nav ---- */
+const links = [...document.querySelectorAll("#nav a[data-id]")];
+const sections = links
+  .map(link => document.getElementById(link.dataset.id))
+  .filter(Boolean);
 
-                            <div>
-                                <h1 class="skills__titles">DevOps</h1>
-                                <span class="skills__subtitle">More than 1 year</span>
-                            </div>
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
+function setActive(id) {
+  for (const link of links) {
+    link.setAttribute(
+      "aria-current",
+      link.dataset.id === id ? "true" : "false"
+    );
+  }
+}
 
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Docker</h3>
-                                </div>
-                            </div>
+function updateActiveSection() {
+  const activationLine = Math.min(
+    window.innerHeight * 0.35,
+    220
+  );
 
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Jenkins</h3>
-                                </div>
-                            </div>
+  let current = sections[0]?.id;
 
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Mongo DB</h3>
-                                </div>
-                            </div>
+  for (const section of sections) {
+    if (section.getBoundingClientRect().top <= activationLine) {
+      current = section.id;
+    } else {
+      break;
+    }
+  }
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  // At the bottom, activate the final section.
+  if (
+    window.scrollY + window.innerHeight >=
+    document.documentElement.scrollHeight - 5
+  ) {
+    current = sections[sections.length - 1]?.id;
+  }
 
-        <!--QUALIFICATIONS SECTION-->
-        <section class="qualification section" id="qualification">
-            <h2 class="section__title">Qualification</h2>
-            <span class="section__subtitle">My Personal Journey</span>
+  if (current) setActive(current);
+}
 
-            <div class="qualification__container container">
-                <div class="qualification__tabs">
-                    <div class="qualification__button button--flex qualification__active" data-target="#education">
-                        <i class="uil uil-graduation-cap qualification__icon"></i>
-                        Education
-                    </div>
+window.addEventListener("scroll", updateActiveSection, {
+  passive: true
+});
+window.addEventListener("resize", updateActiveSection);
 
-                    <div class="qualification__button button--flex qualification__active" data-target="#work">
-                        <i class="uil uil-briefcase-alt qualification__icon"></i>
-                        Work
-                    </div>
-                </div>
+links.forEach(link => {
+  link.addEventListener("click", () => setActive(link.dataset.id));
+});
 
-                <div class="qualification__sections">
-                    <!--QUALIFICATION CONTENT -->
-                    <div class="qualification__content qualification__active" data-content id="education">
-                        <!--QUALIFICATION 1-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Computer Science Honors</h3>
-                                <span class="qualification__subtitle">University of Guelph</span>
-                                <div class="qualification__calender">
-                                    <i class="uil uil-calender"></i>
-                                    September 2020 - April 2023
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-                        <!--QUALIFICATION 2-->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Software Engineering Virtual Experience</h3>
-                                <span class="qualification__subtitle">JPMorganChase</span>
-                                <div class="qualification__calender">
-                                    <i class="uil uil-calender"></i>
-                                    December 2021
-                                </div>
-                            </div>
-                        </div>
-                        <!--QUALIFICATION 3-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Engineering Virtual Program</h3>
-                                <span class="qualification__subtitle">Goldman Sachs</span>
-                                <div class="qualification__calender">
-                                    <i class="uil uil-calender"></i>
-                                    December 2021
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-                        <!--QUALIFICATION 4-->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <!-- <span class="qualification__line"></span> -->
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Guidewire Certified Associate - InsuranceSuite Developer</h3>
-                                <span class="qualification__subtitle">Guidewire</span>
-                                <div class="qualification__calender">
-                                    <i class="uil uil-calender"></i>
-                                    April 2024
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--JOB CONTENT -->
-                    <div class="qualification__content" data-content id="work">
-                        <!--JOB 1-->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                            <div>
-                                <h3 class="qualification__title">Systems Developer</h3>
-                                <span class="qualification__subtitle">The Co-operators</span>
-                                <div class="qualification__calender">
-                                    <i class="uil uil-calender"></i>
-                                    May 2023 - Present
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Software Developer</h3>
-                                <span class="qualification__subtitle">Global Burden of Animal Diseases (GBADs)</span>
-                                <div class="qualification__calender">
-                                    <i class="uil uil-calender"></i>
-                                    January 2022 – April 2023
-                                </div>
-                            </div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-                        <!--JOB 2-->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                            <div>
-                                <h3 class="qualification__title">Software Developer</h3>
-                                <span class="qualification__subtitle">Iona Systems Ltd. (Startup)</span>
-                                <div class="qualification__calender">
-                                    <i class="uil uil-calender"></i>
-                                    June 2022 - February 2023
-                                </div>
-                            </div>
-                        </div>
-                        <!--JOB 3-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Software Developer</h3>
-                                <span class="qualification__subtitle">University of Guelph</span>
-                                <div class="qualification__calender">
-                                    <i class="uil uil-calender"></i>
-                                    July 2022 - September 2022
-                                </div>
-                            </div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <!-- <span class="qualification__line"></span> -->
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!--PORTFOLIO SECTION-->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title">Portfolio</h2>
-            <span class="section__subtitle">Most Recent Work</span>
-
-            <div class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-                    <!--PORTFOLIO 1-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1iPAnTFNflq8MwPvyB0mNhLJSXv2VCBRnkw&s" alt="" class="portfolio__img">
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Trusted Animal Information portaL (TAIL)</h3>
-                            <p class="portfolio__description">designed to facilitate data exploration based on user queries related to various topics. Users can input specific queries, refine them with additional keywords, and explore relevant data, literature, or other related information</p>
-                            <a href="https://gbadske.org/search" target="_blank" class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--PORTFOLIO 2-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="https://gbadske.org/img/GBADsLogoRedesign.webp" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">gbadske.org</h3>
-                            <p class="portfolio__description">Used to display different documentation from GBADs, of developed technologies, and research by the GBADs research team</p>
-                            <a href="https://gbadske.org/" target="_blank"
-                                class="button button--flex button--small portfolio__button">
-                                Demo
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--PORTFOLIO 3-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="https://avatars.githubusercontent.com/u/117784990?s=200&v=4" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">ESW QR Prize Validation System</h3>
-                            <p class="portfolio__description">Fullstack application which generates QR codes that award prizes to those that win a game of plinko</p>
-                            <a href="https://github.com/orgs/ESW-UofG/repositories" target="_blank" class="button button--flex button--small portfolio__button">
-                                See repos
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--PORTFOLIO 4-->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="https://camo.githubusercontent.com/9ef942e8a7e336e46266a6f919543646aed87f3f0d3153df63753f81138d39d4/68747470733a2f2f692e696d6775722e636f6d2f685658433969452e706e67" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Home Server File System (HSFS)</h3>
-                            <p class="portfolio__description">A ready-to-go home server file system</p>
-                            <a href="https://github.com/MatthewSzurkowski/HSFS" target="_blank" class="button button--flex button--small portfolio__button">
-                                Coming Soon
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!--PORTFOLIO 5-->
-                </div>
-
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <div class="swiper-pagination"></div>
-
-
-            </div>
-        </section>
-
-        <!--CONTACT SECTION-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle">Get in touch</span>
-
-            <div class="contact__container container grid">
-                <div>
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Email Me</h3>
-                            <a href="mailto:mszurkow@gmail.com" target="__blank">
-                                <span class="contact__subtitle">mszurkow@gmail.com</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="contact__information">
-                        <i class="uil uil-map-marker contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Location</h3>
-                            <span class="contact__subtitle"> 🏠 Oakville, Canada</span>
-                        </div>
-                    </div>
-                </div>
-                <form form action="https://formsubmit.co/mszurkow@gmail.com" method="POST"
-                    class="contact__form grid">
-                    <div class="contact__inputs grid">
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Name</label>
-                            <input type="text" name="name" class="contact__input" required>
-                        </div>
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input" name="email" required>
-                            <input type="hidden" name="_subject" value="New submission from Website!">
-                        </div>
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Message</label>
-                            <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="button button__flex">
-                                Send Message
-                                <i class="uil uil-message button__icon"></i>
-                            </button>
-
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!--FOOTER SECTION-->
-    <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">
-                        <!--<img src="assets/img/transparent-logo.png">-->
-                        Matthew Szurkowski
-                    </h1>
-                    <span class="footer__subtitle">Software Developer</span>
-                </div>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="#about" class="footer__link">About</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" class="footer__link">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="footer__link">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="footer__socials">
-                    <a href="https://www.linkedin.com/in/matthew-szurkowski/" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
-                    </a>
-                    <a href="https://github.com/MatthewSzurkowski" class="footer__social">
-                        <i class="uil uil-github-alt"></i>
-                    </a>
-                </div>
-            </div>
-
-            <p class="footer__copy">&#169; Matthew Szurkowski. All right reserved</p>
-        </div>
-    </footer>
-
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
-
-    <script src="assets/js/swiper-bundle.min.js"></script>
-
-    <script src="assets/js/main.js"></script>
+updateActiveSection();
+</script>
 </body>
-
 </html>
